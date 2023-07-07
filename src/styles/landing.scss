@@ -28,6 +28,20 @@
         height: 100%;
     }
 
+    //Stars 
+    .stars {
+        display: flex;
+        z-index: 2;
+        gap: 500px;
+
+        position: absolute;
+        bottom: 390px;
+
+        img {
+            height: 60px;
+        }
+    }
+
     //Profile 
 
     .profile {
@@ -65,7 +79,9 @@
         .landing_buttons {
             display: flex;
             flex-direction: column;
-            padding-top: 100px;
+            padding-top: 130px;
+            gap: 15px;
+            z-index: 1;
         }
 
     }
