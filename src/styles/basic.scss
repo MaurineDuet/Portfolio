@@ -1,0 +1,46 @@
+//Fonts 
+
+@font-face {
+    font-family: "Windows";
+    src: url('../styles/fonts/Windows_font/Windows_Regular.ttf');
+}
+
+//Basic settings
+
+html {
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+}
+
+body,
+#root {
+    margin: 0px;
+    min-height: 100vh;
+    width: 100%;
+    line-height: 0;
+    font-family: 'Windows';
+    color: #474350;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+button {
+    padding: 15px 70px;
+    border-radius: 0;
+    border: solid 2px #474350;
+    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.2em;
+
+
+    
+}

@@ -1,0 +1,99 @@
+#root {
+    background: linear-gradient(#FFD0D0, #FDF0D8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//Main frame settings
+
+//Main settings
+
+.landing_container {
+    width: 1000px;
+    height: 720px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    //Computer frame
+    .computer_frame {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    //Profile 
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        .stars_background {
+            width: 950px;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .profile_infos {
+            position: absolute;
+            top: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            img {
+                height: 120px;
+                width: 120px;
+                z-index: 1;
+
+                border-radius: 10px;
+                border: solid 3px #FFFFF3;
+            }
+        }
+
+        //Buttons 
+
+        .landing_buttons {
+            display: flex;
+            flex-direction: column;
+            padding-top: 100px;
+        }
+
+    }
+
+
+    //Frame footer
+
+    .landing_footer {
+        position: absolute;
+        z-index: 1;
+
+        margin-top: 650px;
+
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        img {
+            height: 50px;
+        }
+
+        .power_icons,
+        .utils_icons {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+    }
+
+}
