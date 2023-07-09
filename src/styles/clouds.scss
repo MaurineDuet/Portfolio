@@ -3,13 +3,69 @@
     z-index: 4;
     width: 100%;
 
-    .transparent_c {
+    display: flex;
+
+    .pink_c {
         position: absolute;
-        height: 300px;
-        animation: 10s appear ease-in-out
+        height: 380px;
+        bottom: -250px;
+        left: -50px;
+        opacity: 0;
+        transition: all 3s ease-in-out
     }
 
-    /*     .transparent_c {
+    .pink_c.active {
+        transform: translateX(100px);
+        opacity: 0.8;
+    }
+
+    .lilac_c {
+        position: absolute;
+        height: 200px;
+        bottom: -20px;
+        right: -50px;
+        opacity: 0;
+        transition: all 4s ease-in-out
+    }
+
+    .lilac_c.active {
+        transform: translateX(-250px);
+        opacity: 0.8;
+    }
+
+    .yellow_c {
+        position: absolute;
+        height: 320px;
+        bottom: -300px;
+        right: -150px;
+        opacity: 0;
+        transition: all 6s ease-in-out
+    }
+
+    .yellow_c.active {
+        transform: translateX(-190px);
+        opacity: 0.8;
+    }
+
+    /*
+
+    .blue_c {
+        position: absolute;
+        height: 180px;
+        bottom: 10px;
+        left: -70px;
+        opacity: 0;
+        transition: all 7s ease-in-out
+
+    }
+
+    .blue_c.active {
+        transform: translateX(150px);
+        opacity: 1;
+    }
+
+
+         .transparent_c {
         position: absolute;
         height: 300px;
         left: 50px;
@@ -42,13 +98,7 @@
         animation: 13s float infinite ease-in-out  
     }
 
-    .lilac_c {
-        position: absolute;
-        left: 0px;
-        height: 240px;
-        top: 90px;
-        animation: 11s float infinite ease-in-out  
-    }
+
 
     
 }
