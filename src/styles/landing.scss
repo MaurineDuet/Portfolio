@@ -1,6 +1,4 @@
-//Main frame settings
-
-//Main settings
+//Base div settings
 
 .landing_container_overall {
     background: linear-gradient(#FFD0D0, #FDF0D8);
@@ -12,7 +10,9 @@
     align-items: center;
 }
 
-.landing_container {
+//Main frame settings
+
+.landing_main_frame {
     width: 1000px;
     height: 720px;
 
@@ -44,7 +44,7 @@
         }
     }
 
-    //Profile 
+    //Profile (img + title + buttons)
 
     .profile {
         display: flex;
@@ -86,7 +86,7 @@
             }
         }
 
-        //Buttons 
+        //Landing buttons 
 
         .landing_buttons {
             display: flex;

@@ -5,7 +5,7 @@
     src: url('../styles/fonts/Windows_font/Windows_Regular.ttf');
 }
 
-//Basic settings
+//Main basic div and sections
 
 html {
     margin: 0px;
@@ -22,6 +22,16 @@ body,
     font-family: 'Windows';
     color: #474350;
 }
+
+.container {
+    width: 1400px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Basic elements
 
 * {
     box-sizing: border-box;
