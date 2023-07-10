@@ -46,7 +46,7 @@ function Landing() {
                                           <Link to='/cv' className='link_button' style={{ backgroundColor: "#C2DCFF" }}>
                                                 mon CV
                                           </Link>
-                                          <Link to='/universe' className='link_button' style={{ backgroundColor: "#C2DCFF" }}>
+                                          <Link to='/main' className='link_button' style={{ backgroundColor: "#C2DCFF" }}>
                                                 mon univers
                                           </Link>
                                     </div>
