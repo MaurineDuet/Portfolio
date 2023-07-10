@@ -1,6 +1,8 @@
 import '../styles/main/main.scss'
+import '../styles/main/projects.scss'
 
 //Components
+import Projects from '../components/main/projects'
 import Footer from '../components/footer'
 
 function Main() {
@@ -9,15 +11,7 @@ function Main() {
         <div className="main_overall_container">
             <div className="container main_container">
 
-                <section className='main_left'>
-                    <div className='personnal_projects'>
-
-                    </div>
-                    <div className='formation_projects'>
-
-                    </div>
-
-                </section>
+                <Projects title='Personnels'/>
 
                 <section className='main_center'>
                     <div className='center'>

@@ -14,24 +14,11 @@
 
 .main_container {
     display: flex;
+    align-items: flex-start;
     gap: 100px;
+    padding-top: 50px;
 }
 
-//Left section (projects)
-
-.main_left {
-    display: flex;
-    flex-direction: column;
-
-    .personnal_projects, .formation_projects {
-        width: 500px;
-        background-color: #CDCAC6;
-    }
-
-    .personnal_projects {
-        height: 300px;
-    }
-}
 
 .main_center {
     display: flex;

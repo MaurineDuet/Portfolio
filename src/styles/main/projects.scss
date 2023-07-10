@@ -1,0 +1,53 @@
+.main_left {
+    display: flex;
+    flex-direction: column;
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        width: 500px;
+        height: 300px;
+        background-color: #CDCAC6;
+        box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+        .projects_title {
+            display: flex;
+            flex-direction: column;
+            
+
+            h3 {
+                height: 40px;
+                width: 490px;
+
+                background-color: #30345A;
+                color: #FFFFF3;
+                margin: 5px;
+                padding-left: 10px;
+            }
+
+
+            nav {
+                display: flex;
+
+                ul {
+                    display: flex;
+                }
+            }
+        }
+
+        .projects_main {
+            width: 490px;
+            height: 240px;
+            background: linear-gradient(#FFD0D0, #FDF0D8);
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+
+
+}
