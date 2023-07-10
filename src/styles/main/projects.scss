@@ -1,3 +1,4 @@
+//Basic settings
 .main_left {
     display: flex;
     flex-direction: column;
@@ -6,45 +7,75 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
 
-        width: 500px;
-        height: 300px;
+        width: 600px;
+        height: 370px;
+
         background-color: #CDCAC6;
         box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
 
+        //Top frame with title and tool bar
         .projects_title {
             display: flex;
             flex-direction: column;
             
-
             h3 {
+                display: flex;
+                align-items: center;
+
                 height: 40px;
-                width: 490px;
+                width: 590px;
 
                 background-color: #30345A;
                 color: #FFFFF3;
+
                 margin: 5px;
                 padding-left: 10px;
             }
 
 
             nav {
+                height: 30px;
                 display: flex;
+                align-items: center;
+                padding-left: 15px;
 
                 ul {
                     display: flex;
+                    gap: 7px;
                 }
             }
         }
 
+        //Main frame with projects icons
         .projects_main {
-            width: 490px;
+            width: 590px;
             height: 240px;
+
             background: linear-gradient(#FFD0D0, #FDF0D8);
+            box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
 
             display: flex;
+            align-items: center;
+            column-gap: 60px;
+            row-gap: 40px;
             flex-wrap: wrap;
+
+            padding: 25px 50px;
+        }
+
+        //Bottom of the frame with number of projects
+        .projects_footer {
+            display: flex;
+            align-items: center;
+
+            width: 590px;
+            height: 40px;
+            margin-top: 5px;
+            padding-left: 10px;
+
+            box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+
         }
     }
 

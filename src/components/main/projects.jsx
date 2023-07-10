@@ -1,8 +1,9 @@
 import '../../styles/main/projects.scss'
-
-/* import { useState, useEffect } from 'react' */
+import React from 'react'
 
 function Projects(props) {
+
+    const projectCount = React.Children.count(props.children)
 
     return (
         <section className='main_left'>
@@ -22,13 +23,11 @@ function Projects(props) {
                 </div>
 
                 <div className='projects_main'>
-                   <p>Projet 1</p>
-                   <p>Projet 2</p>
-                   <p>Projet 3</p>
+                {props.children}
                 </div>
 
                 <div className='projects_footer'>
-                    <p>6 projects</p>
+                    <p>{projectCount} projets</p>
                 </div>
 
 

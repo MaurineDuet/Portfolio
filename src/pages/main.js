@@ -3,6 +3,7 @@ import '../styles/main/projects.scss'
 
 //Components
 import Projects from '../components/main/projects'
+import Project from '../components/main/project'
 import Footer from '../components/footer'
 
 function Main() {
@@ -11,7 +12,13 @@ function Main() {
         <div className="main_overall_container">
             <div className="container main_container">
 
-                <Projects title='Personnels'/>
+                <Projects title='Personnels'>
+                    <Project name='The start' />
+                    <Project name='Cake Day' />
+                    <Project name='Dalkom Cafe' />
+                    <Project name='Outfit Me !' />
+                    <Project name='SMTM' />
+                </Projects>
 
                 <section className='main_center'>
                     <div className='center'>
