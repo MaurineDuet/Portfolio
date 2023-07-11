@@ -1,3 +1,4 @@
+//Style
 import '../styles/landing.scss'
 
 //Images

@@ -1,5 +1,7 @@
+//Style
 import '../styles/footer.scss'
 
+//Basic
 import { useState, useEffect } from 'react'
 
 //Images
@@ -10,30 +12,30 @@ import Battery from '../assets/battery.svg'
 
 function Footer() {
 
-    const [currentTime, setCurrentTime] = useState('');
-    const [currentDate, setCurrentDate] = useState('')
+    const [currentTime, setCurrentTime] = useState('') //Initializing time const
+    const [currentDate, setCurrentDate] = useState('') //Initializing date const
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const intervalId = setInterval(() => { //Setting interval for updating time and date
             const now = new Date();
-            const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
+            const currentHour = now.getHours(); //Getting hours
+            const currentMinute = now.getMinutes(); //Getting minutes
             const formattedTime = `${currentHour.toString().padStart(2, '0')}:${currentMinute
                 .toString()
                 .padStart(2, '0')}`;
-            setCurrentTime(formattedTime);
+            setCurrentTime(formattedTime); //Formating time as desired
 
-        const currentDay = now.getDate();
-            const currentMonth = now.getMonth() + 1;
-            const currentYear = now.getFullYear();
+        const currentDay = now.getDate(); //Getting date
+            const currentMonth = now.getMonth() + 1; //Getting month
+            const currentYear = now.getFullYear(); //Getting year
             const formattedDate = `${currentDay.toString().padStart(2, '0')}/${currentMonth
                 .toString()
                 .padStart(2, '0')}/${currentYear}`;
-            setCurrentDate(formattedDate);
-        }, 1000);
+            setCurrentDate(formattedDate); //Formating date as desired
+        }, 1000); //Interval of 1sc for updating
 
         return () => {
-            clearInterval(intervalId);
+            clearInterval(intervalId); //Prevent the code from running between the set interval to save space
         };
     }, [])
 

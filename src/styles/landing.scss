@@ -31,6 +31,7 @@
     }
 
     //Stars 
+
     .stars {
         display: flex;
         z-index: 2;
@@ -45,6 +46,7 @@
     }
 
     //Profile (img + title + buttons)
+
     .profile {
         display: flex;
         flex-direction: column;
@@ -86,6 +88,7 @@
         }
 
         //Landing buttons 
+
         .landing_buttons {
             display: flex;
             flex-direction: column;
@@ -98,6 +101,7 @@
 
 
     //Frame footer
+    
     .landing_footer {
         position: absolute;
         z-index: 3;

@@ -1,6 +1,8 @@
+//Style
 import '../styles/basic.scss'
 import '../styles/landing.scss'
 
+//Basic
 import React from 'react'
 import { Link } from 'react-router-dom'
 

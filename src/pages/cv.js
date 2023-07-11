@@ -1,3 +1,4 @@
+//Style
 import '../styles/cv.scss'
 
 //Images

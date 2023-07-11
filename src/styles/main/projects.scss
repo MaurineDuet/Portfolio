@@ -1,4 +1,5 @@
 //Basic settings
+
 .main_left {
     display: flex;
     flex-direction: column;
@@ -10,12 +11,12 @@
         align-items: center;
 
         width: 550px;
-        /* height: 370px; */
 
         background-color: #CDCAC6;
         box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
 
         //Top frame with title and tool bar
+
         .projects_title {
             display: flex;
             flex-direction: column;
@@ -49,24 +50,25 @@
         }
 
         //Main frame with projects icons
+
         .projects_main {
             width: 540px;
-            /* height: 240px; */
 
             background: linear-gradient(#FFD0D0, #FDF0D8);
             box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
             display: flex;
             align-items: center;
-            column-gap: 60px;
+            justify-content: flex-start;
             row-gap: 30px;
             flex-wrap: wrap;
             overflow: scroll;
 
-            padding: 25px 50px;
+            padding: 25px 30px;
         }
 
         //Bottom of the frame with number of projects
+        
         .projects_footer {
             display: flex;
             align-items: center;

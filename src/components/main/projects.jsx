@@ -1,10 +1,13 @@
+//Style
 import '../../styles/main/projects.scss'
+
+//Basic
 import React from 'react'
 
 function Projects(props) {
 
-    const { title, height, mainHeight } = props
-    const projectCount = React.Children.count(props.children)
+    const { title, height, mainHeight } = props //Defining needed props
+    const projectCount = React.Children.count(props.children) //Initializing count function for Projects children (in this case, a Project)
 
     const projectsStyle = {
         height: height || 'auto', // Use the passed height or set it to 'auto' if not provided

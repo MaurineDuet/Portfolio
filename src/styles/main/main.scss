@@ -43,6 +43,7 @@
             gap: 15px;
 
             cursor: pointer;
+            color: #FFFFF3;
         }
     }
 
@@ -66,10 +67,5 @@
 .main_right {
     display: flex;
     flex-direction: column;
-
-    .right {
-        width: 300px;
-        height: 300px;
-        background-color: #CDCAC6;
-    }
+    gap: 30px;
 }

@@ -1,3 +1,5 @@
+//General footer basic settings
+
 footer {
     background-color: #CDCAC6;
     height: 5vh;
@@ -7,9 +9,13 @@ footer {
     align-items: center;
     width: 100%;
 
+    //Start button
+
     button {
         margin-left: 30px;
     }
+
+    //Right nav (fake buttons)
 
     nav {
 
@@ -34,9 +40,13 @@ footer {
                 background-color: #D9D9D9;
             }
 
+            //Hour button
+
             .hour {
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset!important;
             }
+
+            //Icons
 
             img {
                 height: 17px;

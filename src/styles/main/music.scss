@@ -1,0 +1,56 @@
+//Base settings
+
+.music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 330px;
+    height: 120px;
+
+    background-color: #F1EDFF;
+    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+    //Title
+
+    h3 {
+        display: flex;
+        align-items: center;
+
+        height: 40px;
+        width: 320px;
+
+        background-color: #FFADC7;
+        color: #474350;
+        box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+        margin: 5px;
+        padding-left: 10px;
+    }
+
+    //Main div
+
+    .music_main {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 65px;
+        gap: 10px;
+
+        .music_icons {
+            display: flex;
+            height: 30px;
+            gap: 20px;
+
+            img {
+                height: 20px;
+                object-fit: cover;
+
+                cursor: pointer;
+            }
+        }
+
+    }
+}

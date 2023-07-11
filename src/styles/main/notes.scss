@@ -1,3 +1,5 @@
+//Base settings for the notes section
+
 .notes {
     display: flex;
     flex-direction: column;
@@ -8,6 +10,8 @@
 
     background-color: #CDCAC6;
     box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+    //General section title
 
     .notes_title {
         display: flex;
@@ -41,6 +45,8 @@
         }
     }
 
+    //Main div
+
     .notes_main {
         width: 320px;
         height: 370px;
@@ -54,7 +60,21 @@
         overflow: scroll;
 
         padding: 25px 50px;
+
+        .note_2 {
+            position: relative;
+            bottom: 50px;
+            left: 50px;
+        }
+
+        .note_3 {
+            margin-top: -100px;
+            bottom: 90px;
+            z-index: 1;
+        }
     }
+
+    //Notes footer
 
     .notes_footer {
         display: flex;
