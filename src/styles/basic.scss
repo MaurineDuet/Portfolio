@@ -25,7 +25,7 @@ body,
 
 .container {
     width: 1400px;
-    height: 95vh;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
