@@ -1,4 +1,7 @@
 import '../../styles/main/modal.scss'
+import '../../styles/main/collapsible.scss'
+
+import Collapsible from './collapsible'
 
 //Image
 import GoToProject from '../../assets/go_to_project.svg'
@@ -40,9 +43,17 @@ const Modal = ({ closeModal, creationDate, name }) => {
                     </div>
 
                     <div className='project_details'>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+
+                        <Collapsible label="Fiabilité">
+                            <p className='collapsible_text'>
+                                Les annonces postées sur Kasa garantissent
+                                une fiabilité totale. Les photos sont
+                                conformes aux logements, et toutes les
+                                informations sont régulièrement vérifiées
+                                par nos équipes.
+                            </p>
+                        </Collapsible>
+
                     </div>
 
 

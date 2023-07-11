@@ -1,0 +1,37 @@
+.collapsible,
+.toggle {
+    flex: 1
+}
+
+//Basic settings
+
+.collapsible {
+
+    //Title
+
+    .collapsible_title {
+        height: 40px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 5px;
+        padding: 0 10px;
+
+
+        background-color: #CDCAC6;
+        color: #474350;
+        box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+        cursor: pointer;
+
+    }
+}
+
+/* Collapse content */
+
+.collapsible_text {
+    line-height: 30px;
+    background-color: #FFFFF3;
+}
