@@ -4,7 +4,7 @@ import '../styles/main/projects.scss'
 import '../styles/main/notes.scss'
 
 //Basic
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 //Components
 import Projects from '../components/main/projects'
@@ -14,6 +14,9 @@ import Notes from '../components/main/notes'
 import Note from '../components/main/note'
 import Music from '../components/main/music'
 import Modal from '../components/main/modal'
+
+//Hook
+import { useFetch } from '../hooks/fetch'
 
 //Images
 import Trash from '../assets/trash.svg'
@@ -26,14 +29,44 @@ import Note3 from '../assets/note_3_img.jpg'
 
 function Main() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [personnelProjects, setPersonnelProjects] = useState([])
+    const [formationProjects, setFormationProjects] = useState([])
 
-    const openModal = () => {
-      setIsModalOpen(true);
-    };
-  
+    const [selectedProjectName, setSelectedProjectName] = useState('')
+    const [selectedProjectDescription, setSelectedProjectDescription] = useState('')
+    const [selectedProjectObjectives, setSelectedProjectObjectives] = useState('')
+    const [selectedProjectLangages, setSelectedProjectLangages] = useState('')
+
+    const openModal = (name, description, objectives, langages) => {
+        setSelectedProjectName(name)
+        setSelectedProjectDescription(description)
+        setSelectedProjectObjectives(objectives)
+        setSelectedProjectLangages(langages)
+        setIsModalOpen(true)
+    }
+
     const closeModal = () => {
-      setIsModalOpen(false);
+        setIsModalOpen(false)
+    }
+
+    const { data, error } = useFetch('/db/projects.json')
+
+    useEffect(() => {
+        if (data) {
+            const personnel = data.filter((project) => project.type === 'personnel')
+            const formation = data.filter((project) => project.type === 'formation')
+            setPersonnelProjects(personnel)
+            setFormationProjects(formation)
+        }
+    }, [data])
+
+    if (!data) {
+        return <span>Chargement en cours...</span>
+    }
+
+    if (error) {
+        return <span>Il y a un problème</span>
     }
 
     return (
@@ -43,20 +76,15 @@ function Main() {
                 <div className='main_left'>
 
                     <Projects title='Personnels' height="350px" mainHeight="220px" >
-                        <Project name='The start' onClick={openModal}/>
-                        <Project name='Cake Day' onClick={openModal}/>
-                        <Project name='Dalkom Cafe' onClick={openModal}/>
-                        <Project name='Outfit Me !' onClick={openModal}/>
-                        <Project name='SMTM' onClick={openModal}/>
+                        {personnelProjects.map((project) =>
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages)} />
+                        )}
                     </Projects>
 
                     <Projects title='Formation' height="250px" mainHeight="120px">
-                        <Project name='MVG' onClick={openModal}/>
-                        <Project name='KASA' onClick={openModal}/>
-                        <Project name='N. Carducci' onClick={openModal}/>
-                        <Project name='S. Bluel' onClick={openModal}/>
-                        <Project name='Booki' onClick={openModal}/>
-                        <Project name='Portfolio' onClick={openModal}/>
+                        {formationProjects.map((project) =>
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages )} />
+                        )}
                     </Projects>
 
                 </div>
@@ -86,7 +114,7 @@ function Main() {
                     <Notes>
                         <Note text='To do : Compléter la base de données de Outfit Me !' img={Note1} className='note_1'></Note>
                         <Note text='Comeback de NewJeans le 21 juillet !' img={Note2} className='note_2'></Note>
-                        <Note text= 'Seulement un mois avant le départ en Corée <3' img={Note3} className='note_3'></Note>
+                        <Note text='Seulement un mois avant le départ en Corée <3' img={Note3} className='note_3'></Note>
                     </Notes>
 
                     <Music></Music>
@@ -94,7 +122,7 @@ function Main() {
 
             </div>
 
-            {isModalOpen && <Modal closeModal={closeModal} />}
+            {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} />}
 
             <Footer></Footer>
 

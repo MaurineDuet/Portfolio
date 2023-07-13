@@ -6,7 +6,7 @@ import Collapsible from './collapsible'
 //Image
 import GoToProject from '../../assets/go_to_project.svg'
 
-const Modal = ({ closeModal, creationDate, name }) => {
+function Modal({ closeModal, creationDate, name, description, objectives, langages }) {
 
     return (
         <div className="modal_overlay">
@@ -44,13 +44,21 @@ const Modal = ({ closeModal, creationDate, name }) => {
 
                     <div className='project_details'>
 
-                        <Collapsible label="Fiabilité">
+                        <Collapsible label="Description du projet">
                             <p className='collapsible_text'>
-                                Les annonces postées sur Kasa garantissent
-                                une fiabilité totale. Les photos sont
-                                conformes aux logements, et toutes les
-                                informations sont régulièrement vérifiées
-                                par nos équipes.
+                                {description}
+                            </p>
+                        </Collapsible>
+
+                        <Collapsible label="Objectifs du projet">
+                            <p className='collapsible_text'>
+                                {objectives}
+                            </p>
+                        </Collapsible>
+
+                        <Collapsible label="Langages">
+                            <p className='collapsible_text'>
+                                {langages}
                             </p>
                         </Collapsible>
 

@@ -16,7 +16,7 @@
         align-items: center;
         justify-content: space-between;
 
-        margin: 5px;
+        margin: 0 5px;
         padding: 0 10px;
 
 
@@ -32,6 +32,10 @@
 /* Collapse content */
 
 .collapsible_text {
-    line-height: 30px;
     background-color: #FFFFF3;
+    color: #474350;
+    box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+    line-height: 30px;
+    margin: 0 5px;
+    padding: 10px;
 }

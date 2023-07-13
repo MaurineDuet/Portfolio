@@ -21,7 +21,7 @@
         background: #CDCAC6;
         
         width: 550px;
-        height: 450px;
+        height: 500px;
 
         //Title (blue bar + params)
 
@@ -71,7 +71,7 @@
 
         .modal_main {
             width: 540px;
-            height: 320px;
+            height: 370px;
 
             background: linear-gradient(#FFD0D0, #FDF0D8);
             box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
@@ -99,12 +99,11 @@
             }
 
             .project_details {
-                height: 400px;
                 width: 100%;
                 
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 20px;
             }
         }
 
