@@ -3,6 +3,7 @@ import '../styles/footer.scss'
 
 //Basic
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 //Images
 import Notes from '../assets/notes.svg'
@@ -14,7 +15,9 @@ function Footer() {
 
     const [currentTime, setCurrentTime] = useState('') //Initializing time const
     const [currentDate, setCurrentDate] = useState('') //Initializing date const
+    const [menuVisible, setMenuVisible] = useState(false)
 
+    //Getting time and date
     useEffect(() => {
         const intervalId = setInterval(() => { //Setting interval for updating time and date
             const now = new Date();
@@ -25,7 +28,7 @@ function Footer() {
                 .padStart(2, '0')}`;
             setCurrentTime(formattedTime); //Formating time as desired
 
-        const currentDay = now.getDate(); //Getting date
+            const currentDay = now.getDate(); //Getting date
             const currentMonth = now.getMonth() + 1; //Getting month
             const currentYear = now.getFullYear(); //Getting year
             const formattedDate = `${currentDay.toString().padStart(2, '0')}/${currentMonth
@@ -39,10 +42,22 @@ function Footer() {
         };
     }, [])
 
+    //Trigger open menu
+    const toggleMenu = () => {
+        setMenuVisible(!menuVisible);
+    }
 
     return (
         <footer>
-            <button>start</button>
+            <button onClick={toggleMenu}>start</button>
+            <div className='footer_menu' style={{ display: menuVisible ? 'flex' : 'none' }}>
+                <Link to='/' className='menu_button'>
+                    accueil
+                </Link>
+                <Link to='/cv' className='menu_button'>
+                    mon CV
+                </Link>
+            </div>
 
             <nav>
                 <ul>

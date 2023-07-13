@@ -1,12 +1,17 @@
+//Style
 import '../../styles/main/modal.scss'
 import '../../styles/main/collapsible.scss'
 
+//Component
 import Collapsible from './collapsible'
 
 //Image
 import GoToProject from '../../assets/go_to_project.svg'
+import ProjectImg1 from '../../assets/project_img_1.jpg'
+import ProjectImg2 from '../../assets/project_img_2.jpg'
+import ProjectImg3 from '../../assets/project_img_3.jpg'
 
-function Modal({ closeModal, creationDate, name, description, objectives, langages }) {
+function Modal({ closeModal, creationdate, name, description, objectives, langages }) {
 
     return (
         <div className="modal_overlay">
@@ -45,6 +50,7 @@ function Modal({ closeModal, creationDate, name, description, objectives, langag
                     <div className='project_details'>
 
                         <Collapsible label="Description du projet">
+                            <img src={ProjectImg1} alt="Meme de chat" />
                             <p className='collapsible_text'>
                                 {description}
                             </p>
@@ -54,9 +60,11 @@ function Modal({ closeModal, creationDate, name, description, objectives, langag
                             <p className='collapsible_text'>
                                 {objectives}
                             </p>
+                            <img src={ProjectImg2} alt="Petit astronaute" />
                         </Collapsible>
 
                         <Collapsible label="Langages">
+                            <img src={ProjectImg3} alt="Petit personnage" />
                             <p className='collapsible_text'>
                                 {langages}
                             </p>
@@ -69,7 +77,7 @@ function Modal({ closeModal, creationDate, name, description, objectives, langag
 
 
                 <div className='modal_footer'>
-                    <p>Date de création : {creationDate}</p>
+                    <p>Date de création : {creationdate}</p>
                 </div>
 
             </div>
