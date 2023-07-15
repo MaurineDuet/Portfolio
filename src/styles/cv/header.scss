@@ -1,0 +1,21 @@
+header {
+    background-color: #CDCAC6;
+    height: 5vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    text-transform: uppercase;
+    z-index: 1;
+
+    ul{
+        display: flex;
+        gap: 5px;
+
+        li{
+            cursor: pointer;
+        }
+    }
+}

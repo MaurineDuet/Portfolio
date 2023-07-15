@@ -5,6 +5,7 @@ import '../styles/main/notes.scss'
 
 //Basic
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 //Components
 import Projects from '../components/main/projects'
@@ -100,10 +101,10 @@ function Main() {
                             <p>Corbeille</p>
                         </div>
 
-                        <div className='about_icon'>
+                        <Link to='/cv' className='about_icon'>
                             <img src={About} alt="Icône CV" />
                             <p>Mon CV</p>
-                        </div>
+                        </Link>
 
                     </div>
 

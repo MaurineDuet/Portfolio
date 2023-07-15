@@ -1,8 +1,12 @@
 //Style
-import '../styles/cv.scss'
+import '../styles/cv/cv.scss'
 
 //Images
 import StarsBackground from '../assets/stars_background.jpeg'
+
+//Component
+import Header from '../components/cv/header'
+import Footer from '../components/footer'
 
 function Cv() {
 
@@ -11,11 +15,19 @@ function Cv() {
 
             <img src={StarsBackground} alt="Fond d'écran étoiles" className='stars_background_cv' />
 
+            <Header></Header>
+
             <div className='container'>
+
+                
 
             </div>
 
+            <Footer></Footer>
+
         </div>
+
+
     )
 }
 
