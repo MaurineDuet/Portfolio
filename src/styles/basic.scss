@@ -23,7 +23,7 @@ body,
     margin: 0px;
     min-height: 100vh;
     width: 100%;
-    line-height: 0;
+    line-height: 1;
     font-family: 'Windows';
     color: #474350;
 }
@@ -44,22 +44,6 @@ body,
 
 h2 {
     font-size: 1.8em;
-}
-
-.link_button {
-    padding: 20px 60px;
-    border-radius: 0;
-    border: solid 2px #474350;
-    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
-
-    color: inherit;
-    font-family: inherit;
-    font-size: 1.2em;
-
-    cursor: pointer;
-
-    text-decoration: none;
-    text-align: center;
 }
 
 button {

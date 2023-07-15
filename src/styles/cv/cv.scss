@@ -1,5 +1,6 @@
 //Basic settings
 
+//Whole page container
 .cv_container_overall {
     background: linear-gradient(#363543 80%, #454451 85%, #7D7E88 90%, #C2DCFF 100%);
     background-repeat: no-repeat;
@@ -11,6 +12,7 @@
     align-items: center;
     position: relative;
 
+    //Background image
     .stars_background_cv {
         position: absolute;
         object-fit: cover;
@@ -18,8 +20,34 @@
         height: 500px;
     }
     
-    .container {
-        min-height: 90vh;
+        //Second container
+        .cv_small_container {
+            min-height: 90vh;
+            color: #FFFFF3;
+            
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            z-index: 2;
+
+            //Nav and buttons
+            .cv_buttons {
+                display: flex;
+                gap: 20px;
+
+                .cv_button {
+                    background-color: #606B7F;
+                    border: solid 2px #FFFFF3;
+                    border-radius: 10px;
+                    padding: 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #C2DCFF;
+                    }
+                }
+            }
+        }
     }
-}
+
 

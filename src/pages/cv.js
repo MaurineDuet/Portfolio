@@ -7,6 +7,8 @@ import StarsBackground from '../assets/stars_background.jpeg'
 //Component
 import Header from '../components/cv/header'
 import Footer from '../components/footer'
+import Profile from '../components/cv/profile'
+import Card from '../components/cv/card'
 
 function Cv() {
 
@@ -19,7 +21,22 @@ function Cv() {
 
             <div className='container'>
 
-                
+                <section className='cv_small_container'>
+
+                    <Profile></Profile>
+
+                    <nav>
+                        <ul className='cv_buttons'>
+                            <li className='cv_button'>XP pro</li>
+                            <li className='cv_button'>formation</li>
+                            <li className='cv_button'>stats</li>
+                        </ul>
+                    </nav>
+
+                    <Card></Card>
+
+                </section>
+
 
             </div>
 
