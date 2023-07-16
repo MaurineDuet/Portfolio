@@ -1,5 +1,6 @@
 //Style
 import '../styles/cv/cv.scss'
+import '../styles/cv/details.scss'
 
 //Images
 import StarsBackground from '../assets/stars_background.jpeg'
@@ -25,18 +26,21 @@ function Cv() {
 
                     <Profile></Profile>
 
-                    <nav>
-                        <ul className='cv_buttons'>
-                            <li className='cv_button'>XP pro</li>
-                            <li className='cv_button'>formation</li>
-                            <li className='cv_button'>stats</li>
-                        </ul>
-                    </nav>
+                    <div className='cv_details'>
 
-                    <Card></Card>
+                        <nav>
+                            <ul className='cv_buttons'>
+                                <li className='cv_button'>XP pro</li>
+                                <li className='cv_button'>formation</li>
+                                <li className='cv_button'>stats</li>
+                            </ul>
+                        </nav>
+
+                        <Card></Card>
+
+                    </div>
 
                 </section>
-
 
             </div>
 

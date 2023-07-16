@@ -1,0 +1,22 @@
+.cv_details {
+
+    //Nav and buttons
+    .cv_buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+
+        .cv_button {
+            background-color: #CDCAC6;
+            box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+            padding: 15px 0px;
+            width: 120px;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #C2DCFF;
+            }
+        }
+    }
+}

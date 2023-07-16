@@ -2,78 +2,114 @@
 .cv_profile {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     z-index: 1;
-    width: 450px;
-    padding: 50px 0;
+    width: 47%;
+    padding: 5px;
+    margin: 40px 0;
+    position: relative;
+
+    background-color: #CDCAC6;
+    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+    //Window title
+    h3 {
+        display: flex;
+        align-items: center;
+        align-self: center;
+
+        height: 40px;
+        width: 100%;
+
+        background-color: #30345A;
+        color: #FFFFF3;
+
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    //Nav general settings
+    ul {
+        display: flex;
+        padding: 10px 0 10px 15px;
+        border-bottom: 1px #474350 solid;
+        box-shadow: 0px 1px 0 #FFFFF3;
+    }
+
+    //Nav 1
+    .cv_nav_1 {
+        align-items: center;
+        gap: 7px;
+    }
+
+    //Nav 2
+    .cv_nav_2 {
+        gap: 30px;
+        align-items: center;
+
+        li {
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    .cv_mail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0 10px 15px;
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+        .cv_mail_bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 150px 5px 10px;
+            background-color: white;
+        }
+
+        .cv_mail_send {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+    }
 
     //Profile pic
     video {
-        height: 350px;
-        width: 450px;
+        height: 280px;
+        width: 100%;
         object-fit: cover;
-        border-radius: 10px;
-        border: solid 3px #FFFFF3;
+        box-shadow: 3px 3px 0 #FFFFF3, 3px 3px #474350 inset;
     }
 
-    //Profile title
-    .cv_profile_title {
+    .cv_title {
 
-        background-color: #565575;
-        border: solid 3px #FFFFF3;
-        border-radius: 10px;
-        padding: 15px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 30px 15px;
+        margin-top: 5px;
+        background: linear-gradient(#FFD0D0, #FDF0D8);
+        box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
-        p {
-            font-size: 1.3em;
-        }
-
-        h2 {
-            padding-top: 10px;
-            font-size: 2em;
+        h1 {
+            font-size: 3em;
             text-transform: uppercase;
         }
 
     }
 
-    //Description below the pic
-    .cv_profile_description {
-        border: solid 3px #FFFFF3;
-        border-radius: 10px;
-        padding: 15px 30px;
-        line-height: 1.3;
-    }
-
-    //Basic informations in small div
-    .cv_profile_infos {
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        img {
-            height: 100px;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            li {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                border: solid 2px #FFFFF3;
-                border-radius: 10px;
-                padding: 15px;
-
-                img {
-                    height: 20px;
-                    width: 20px;
-                }
-            }
-        }
-    }
 
 }
