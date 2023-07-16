@@ -1,9 +1,16 @@
 .cv_details {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+
     //Nav and buttons
     .cv_buttons {
         display: flex;
-        gap: 20px;
+        width: 100%;
+        gap: 40px;
+        justify-content: center;
         margin-top: 40px;
 
         .cv_button {

@@ -12,7 +12,7 @@ import CvSendMail from '../../assets/cv_send_mail_icon.svg'
 
 function Profile() {
     return (
-        <div className="cv_profile">
+        <section className="cv_profile">
 
             <h3>About me</h3>
 
@@ -57,7 +57,7 @@ function Profile() {
                 <p>Dev web full stack en formation, j’adore me lancer dans de nouveaux projets. Amoureuse de React et de Corée du Sud.</p>
             </div>
 
-        </div>
+        </section>
     )
 }
 

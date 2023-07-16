@@ -28,13 +28,11 @@ function Cv() {
 
                     <div className='cv_details'>
 
-                        <nav>
-                            <ul className='cv_buttons'>
-                                <li className='cv_button'>XP pro</li>
-                                <li className='cv_button'>formation</li>
-                                <li className='cv_button'>stats</li>
-                            </ul>
-                        </nav>
+                        <ul className='cv_buttons'>
+                            <li className='cv_button'>XP pro</li>
+                            <li className='cv_button'>formation</li>
+                            <li className='cv_button'>stats</li>
+                        </ul>
 
                         <Card></Card>
 
