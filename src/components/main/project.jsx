@@ -4,9 +4,9 @@ import '../../styles/main/project.scss'
 //Image
 import File from '../../assets/file.svg'
 
-function Project({ name, onClick }) {
+function Project({ name, onClick, isSelected }) {
     return (
-        <div className='project' onClick={onClick}>
+        <div className={`project ${isSelected ? 'selected' : ''}`} onClick={onClick}>
             <img src={File} alt="Icône de dossier" />
             <p>{name}</p>
         </div>

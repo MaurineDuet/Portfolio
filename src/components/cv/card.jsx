@@ -4,6 +4,8 @@ import '../../styles/cv/card.scss'
 //Basic
 import React from 'react'
 
+import Project from '../main/project'
+
 //Images
 import LocationIcon from '../../assets/cv_location_icon.svg'
 import CalendarIcon from '../../assets/cv_calendar_icon.svg'
@@ -12,9 +14,9 @@ import CheckIcon from '../../assets/cv_check_icon.svg'
 import NotesIcon from '../../assets/cv_notes_icon.svg'
 import SearchIcon from '../../assets/cv_search_icon.svg'
 
-function Card(props) {
+function Card({ project, onProjectClick, projects, selectedProject }) {
 
-    const { title, job_calendar, job_description, job_place, strong_skills, good_skills, average_skills, weak_skills, search, fileCount } = props
+    const { name, job_calendar, job_description, job_place, strong_skills, good_skills, average_skills, weak_skills, search, fileCount } = project || {}
 
     return (
         <section className="cv_card">
@@ -32,13 +34,20 @@ function Card(props) {
             <div className="cv_card_main">
 
                 <div className="cv_card_files">
-                    {props.children}
+                    {projects.map((project) => (
+                        <Project
+                            key={project.id}
+                            name={project.name}
+                            onClick={() => onProjectClick(project)}
+                            isSelected={project === selectedProject}
+                        />
+                    ))}
                 </div>
 
                 <div className='cv_card_details'>
 
                     <div className='cv_card_title'>
-                        <h3>Test2 {title}</h3>
+                        <h3>{name}</h3>
                         <ul>
                             <li>
                                 <img src={LocationIcon} alt="" />
@@ -59,7 +68,7 @@ function Card(props) {
 
                         <ul>
                             <li>
-                                <div>
+                                <div className='check_icon_box'>
                                     <img src={CheckIcon} alt="" />
                                     <img src={CheckIcon} alt="" />
                                     <img src={CheckIcon} alt="" />
@@ -67,7 +76,7 @@ function Card(props) {
                                 {good_skills}
                             </li>
                             <li>
-                                <div>
+                                <div className='check_icon_box'>
                                     <img src={CheckIcon} alt="" />
                                     <img src={CheckIcon} alt="" />
                                     <img src={CheckIcon} alt="" />
@@ -76,7 +85,7 @@ function Card(props) {
                                 {strong_skills}
                             </li>
                             <li>
-                                <div>
+                                <div className='check_icon_box'>
                                     <img src={CheckIcon} alt="" />
                                     <img src={CheckIcon} alt="" />
                                 </div>
@@ -89,8 +98,8 @@ function Card(props) {
 
                     </div>
 
-                    <div className='cv_ard_tools'>
-                    {props.children}
+                    <div className='cv_card_tools'>
+                        
                     </div>
 
                     <div className='cv_card_search'>
