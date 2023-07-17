@@ -6,7 +6,7 @@
     z-index: 1;
     width: 750px;
     padding: 5px;
-    margin: 40px 0;
+    margin: 40px 0 100px 0;
     position: relative;
 
     background-color: #CDCAC6;
@@ -55,7 +55,7 @@
         .cv_card_details {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
             gap: 20px;
 
@@ -119,6 +119,19 @@
             .cv_card_tools {
                 background-color: #F1EDFF;
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 20px;
+
+                .cv_card_tool {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex-basis: 30%;
+                }
+
             }
 
             .cv_card_search {

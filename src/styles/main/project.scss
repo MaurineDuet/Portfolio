@@ -13,10 +13,15 @@
     img {
         width: 50px;
     }
+
+    p {
+        padding: 3px 5px;
+    }
 }
 
 .selected {
     p {
-        background-color: blue;
+        background-color: #30345A;
+        color: #FFFFF3;
     }
 }

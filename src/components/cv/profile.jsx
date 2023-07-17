@@ -54,7 +54,8 @@ function Profile() {
 
             <div className='cv_title'>
                 <h1>Maurine Duet</h1>
-                <p>Dev web full stack en formation, j’adore me lancer dans de nouveaux projets. Amoureuse de React et de Corée du Sud.</p>
+                <p>Dev web full stack en formation, j’adore me lancer dans de nouveaux projets. <br /> 
+                Amoureuse de React et de Corée du Sud.</p>
             </div>
 
         </section>

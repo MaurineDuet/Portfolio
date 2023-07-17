@@ -9,19 +9,23 @@ import Project from '../main/project'
 //Images
 import LocationIcon from '../../assets/cv_location_icon.svg'
 import CalendarIcon from '../../assets/cv_calendar_icon.svg'
-/* import ToolsIcon from '../../assets/cv_tools_icon.svg' */
+import ToolsIcon from '../../assets/cv_tools_icon.svg'
 import CheckIcon from '../../assets/cv_check_icon.svg'
 import NotesIcon from '../../assets/cv_notes_icon.svg'
 import SearchIcon from '../../assets/cv_search_icon.svg'
 
-function Card({ project, onProjectClick, projects, selectedProject }) {
+function Card({ selectedExperience, onExperienceClick, experiences }) {
 
-    const { name, job_calendar, job_description, job_place, strong_skills, good_skills, average_skills, weak_skills, search, fileCount } = project || {}
+    const { name, job_calendar, job_description, job_place, strong_skills, good_skills, average_skills, weak_skills, tools = [], search } = selectedExperience || {}
+
+    const selectedType = selectedExperience ? selectedExperience.type : ''
+    const selectedExperiences = experiences.filter((selectedExperience) => selectedExperience.type === selectedType);
+    const experienceCount = selectedExperiences.length
 
     return (
         <section className="cv_card">
 
-            <h3>Test</h3>
+            <h3>{selectedType === 'work' ? 'Expériences professionnelles' : 'Formation' }</h3>
 
             <ul className='cv_nav_1'>
                 <li>File</li>
@@ -34,12 +38,12 @@ function Card({ project, onProjectClick, projects, selectedProject }) {
             <div className="cv_card_main">
 
                 <div className="cv_card_files">
-                    {projects.map((project) => (
+                    {experiences.map((experience) => (
                         <Project
-                            key={project.id}
-                            name={project.name}
-                            onClick={() => onProjectClick(project)}
-                            isSelected={project === selectedProject}
+                            key={experience.id}
+                            name={experience.name}
+                            onClick={() => onExperienceClick(experience)}
+                            isSelected={experience === selectedExperience}
                         />
                     ))}
                 </div>
@@ -99,7 +103,12 @@ function Card({ project, onProjectClick, projects, selectedProject }) {
                     </div>
 
                     <div className='cv_card_tools'>
-                        
+                        {tools.map((tool, index) => (
+                            <div className='cv_card_tool' key={index}>
+                                <img src={ToolsIcon} alt="" />
+                                <p>{tool}</p>
+                            </div>
+                        ))}
                     </div>
 
                     <div className='cv_card_search'>
@@ -111,7 +120,7 @@ function Card({ project, onProjectClick, projects, selectedProject }) {
 
             </div>
 
-            <p className='cv_card_footer'>{fileCount} expériences</p>
+            <p className='cv_card_footer'>{experienceCount} {selectedType === 'work' && experienceCount === 1 ? 'expérience' : selectedType === 'work' && experienceCount > 1 ? 'expériences' : selectedType === 'education' && experienceCount === 1 ? 'formation' : 'formations'}</p>
 
         </section>
     )

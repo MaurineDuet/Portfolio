@@ -10,7 +10,7 @@ import Header from '../components/cv/header'
 import Footer from '../components/footer'
 import Profile from '../components/cv/profile'
 import Card from '../components/cv/card'
-
+import StatsCard from '../components/cv/statscard'
 
 //Hook
 import { useFetch } from '../hooks/fetch'
@@ -20,7 +20,8 @@ function Cv() {
 
     const [workExperience, setWorkExperience] = useState([])
     const [educationExperience, setEducationExperience] = useState([])
-    const [selectedProject, setSelectedProject] = useState(null)
+    const [selectedExperience, setSelectedExperience] = useState(null)
+    const [selectedButton, setSelectedButton] = useState('work')
     const { data, error } = useFetch('/db/experiences.json')
 
     useEffect(() => {
@@ -29,20 +30,27 @@ function Cv() {
             const education = data.filter((experience) => experience.type === 'education')
             setWorkExperience(work)
             setEducationExperience(education)
-            setSelectedProject(work[0])
+            setSelectedExperience(work[0])
         }
     }, [data])
 
-    const handleProjectClick = (project) => {
-        setSelectedProject(project);
-      };
-    
-      const handleWorkButtonClick = () => {
-        setSelectedProject(workExperience[0]);
-      };
-    
-      const handleEducationButtonClick = () => {
-        setSelectedProject(educationExperience[0]);
+    const handleExperienceClick = (experience) => {
+        setSelectedExperience(experience);
+    };
+
+    const handleWorkButtonClick = () => {
+        setSelectedButton('work')
+        setSelectedExperience(workExperience[0]);
+    };
+
+    const handleEducationButtonClick = () => {
+        setSelectedButton('education')
+        setSelectedExperience(educationExperience[0]);
+    }
+
+    const handleSkillsButtonClick = () => {
+        setSelectedButton('stats');
+        setSelectedExperience('compétences');
       }
 
     if (!data) {
@@ -51,6 +59,30 @@ function Cv() {
 
     if (error) {
         return <span>Il y a un problème</span>
+    }
+
+    let content;
+    if (selectedButton === 'work' || selectedButton === 'education') {
+        content = (
+            <Card
+                selectedExperience={selectedExperience}
+                onExperienceClick={handleExperienceClick}
+                experiences={
+                    selectedExperience && selectedExperience.type === 'work'
+                        ? workExperience
+                        : selectedExperience && selectedExperience.type === 'education'
+                            ? educationExperience
+                            : []
+                }
+            />
+        );
+    } else if (selectedButton === 'stats') {
+        content = (
+            <StatsCard
+            selectedExperience={selectedExperience}
+            onExperienceClick={handleExperienceClick}
+            />
+        )
     }
 
 
@@ -71,13 +103,12 @@ function Cv() {
                     <div className='cv_details'>
 
                         <ul className='cv_buttons'>
-                            <li className='cv_button work_button' onClick={handleWorkButtonClick}>XP pro</li>
-                            <li className='cv_button education_button' onClick={handleEducationButtonClick}>formation</li>
-                            <li className='cv_button'>stats</li>
+                            <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
+                            <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>
+                            <li className={`cv_button stats_button ${selectedButton === 'skills' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
                         </ul>
 
-                        <Card project={selectedProject} onProjectClick={handleProjectClick} projects={selectedProject && selectedProject.type === 'work' ? workExperience : educationExperience}>
-                        </Card>
+                        {content}
 
                     </div>
 
