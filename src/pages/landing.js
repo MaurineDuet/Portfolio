@@ -45,11 +45,11 @@ function Landing() {
                                     </div>
 
                                     <div className='landing_buttons'>
-                                          <Link to='/cv' className='link_button' style={{ backgroundColor: "#C2DCFF" }}>
-                                                mon CV
-                                          </Link>
-                                          <Link to='/main' className='link_button' style={{ backgroundColor: "#C2DCFF" }}>
+                                          <Link to='/main' className='link_button'>
                                                 mon univers
+                                          </Link>
+                                          <Link to='/cv' className='link_button'>
+                                                mon CV
                                           </Link>
                                     </div>
 

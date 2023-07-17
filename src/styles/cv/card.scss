@@ -1,17 +1,17 @@
-//Basic settings
-
+//Overall div
 .cv_card {
     display: flex;
     flex-direction: column;
     z-index: 1;
     width: 750px;
     padding: 5px;
-    margin: 40px 0 100px 0;
+    margin-top: 50px;
     position: relative;
 
     background-color: #CDCAC6;
     box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
 
+    //Overall div title
     h3 {
         display: flex;
         align-items: center;
@@ -24,7 +24,6 @@
         color: #FFFFF3;
 
         padding-left: 10px;
-        margin-bottom: 5px;
     }
 
     //Nav settings
@@ -35,15 +34,17 @@
         gap: 7px;
     }
 
-    //Main content
+    //Main content - main div
     .cv_card_main {
         display: flex;
         gap: 7px;
 
+        //Left side (list of files div)
         .cv_card_files {
             display: flex;
             flex-direction: column;
             width: 30%;
+            max-height: 630px;
             gap: 30px;
 
             background-color: #FDF0D8;
@@ -52,12 +53,15 @@
             padding: 40px 0;
         }
 
+        //Right side (details div)
         .cv_card_details {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             gap: 20px;
+            max-height: 630px;
+            overflow-x: scroll;
 
             padding: 40px 0;
             width: calc(70% - 5px);
@@ -65,9 +69,13 @@
             background: linear-gradient(#FFD0D0, #FDF0D8);
             box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
+            //Shared properties between children divs
             .cv_card_title,
             .cv_card_skills,
-            .cv_card_tools {
+            .cv_card_tools,
+            .cv_card_hobbies,
+            .cv_card_global_skills,
+            .cv_card_objectives {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -88,11 +96,13 @@
 
                     li {
                         display: flex;
+                        align-items: center;
                         gap: 10px;
                     }
                 }
             }
 
+            //First div (work + edu)
             .cv_card_title {
                 background-color: #FFFFF3;
                 box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
@@ -104,6 +114,7 @@
                 }
             }
 
+            //Skills div (work + edu)
             .cv_card_skills {
                 background-color: #F1EDFF;
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
@@ -116,8 +127,9 @@
                 }
             }
 
+            //Tools div (work + edu)
             .cv_card_tools {
-                background-color: #F1EDFF;
+                background-color: #FFFFF3;
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
                 display: flex;
@@ -134,17 +146,55 @@
 
             }
 
+            //Search div (work + edu)
             .cv_card_search {
                 padding: 20px;
                 background-color: #D9D9D9;
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
-                
+
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 gap: 10px;
                 width: 70%;
             }
+
+            //Skills div (stats)
+            .cv_card_global_skills {
+                background-color: #F1EDFF;
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+                li {
+
+                    .check_icon_box {
+                        display: flex;
+                        gap: 5px;
+                    }
+                }
+            }
+
+            
+            //Shared properties btw hobbies div and objectives div (stats)
+            .cv_card_hobbies, .cv_card_objectives {
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+                h3 {
+                    background-color: #FFADC7;
+                    border-bottom: 2px solid #474350;
+                    color: #474350;
+                }
+            }
+
+            //Hobbies div (stats)
+            .cv_card_hobbies {
+                background-color: #FFFFF3;
+            }
+
+            //Objectives div (stats)
+            .cv_card_objectives {
+                background-color: #D9D9D9;
+            }
+
         }
 
     }

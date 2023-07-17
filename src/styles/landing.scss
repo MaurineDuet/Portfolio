@@ -108,11 +108,16 @@
                 color: inherit;
                 font-family: inherit;
                 font-size: 1.2em;
+                background-color: #C2DCFF;
             
                 cursor: pointer;
             
                 text-decoration: none;
                 text-align: center;
+
+                &:hover {
+                    background-color: #FFADC7;
+                }
             }
             
         }

@@ -1,6 +1,7 @@
 //Style
 import '../styles/cv/cv.scss'
 import '../styles/cv/details.scss'
+import '../styles/basic.scss'
 
 //Images
 import StarsBackground from '../assets/stars_background.jpeg'
@@ -11,6 +12,9 @@ import Footer from '../components/footer'
 import Profile from '../components/cv/profile'
 import Card from '../components/cv/card'
 import StatsCard from '../components/cv/statscard'
+
+//Basic 
+import { Link } from 'react-router-dom'
 
 //Hook
 import { useFetch } from '../hooks/fetch'
@@ -51,7 +55,7 @@ function Cv() {
     const handleSkillsButtonClick = () => {
         setSelectedButton('stats');
         setSelectedExperience('compétences');
-      }
+    }
 
     if (!data) {
         return <span>Chargement en cours...</span>
@@ -79,8 +83,8 @@ function Cv() {
     } else if (selectedButton === 'stats') {
         content = (
             <StatsCard
-            selectedExperience={selectedExperience}
-            onExperienceClick={handleExperienceClick}
+                selectedExperience={selectedExperience}
+                onExperienceClick={handleExperienceClick}
             />
         )
     }
@@ -105,12 +109,22 @@ function Cv() {
                         <ul className='cv_buttons'>
                             <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
                             <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>
-                            <li className={`cv_button stats_button ${selectedButton === 'skills' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
+                            <li className={`cv_button stats_button ${selectedButton === 'stats' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
                         </ul>
 
                         {content}
 
                     </div>
+
+                    <div className='cv_bottom_buttons'>
+                        <Link to='/' className='cv_bottom_button'>
+                            retour
+                        </Link>
+                        <Link to='/main' className='cv_bottom_button'>
+                            explorer mon univers
+                        </Link>
+                    </div>
+
 
                 </section>
 
