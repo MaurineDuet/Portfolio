@@ -1,3 +1,5 @@
+//---------- RESOLUTION : 1400px and more screens (base)
+
 //General settings
 
 .main_overall_container {
@@ -36,7 +38,8 @@
             height: 60px;
         }
 
-        .trash_icon, .about_icon {
+        .trash_icon,
+        .about_icon {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -52,7 +55,7 @@
 
     .center {
         border-radius: 10px;
-        border : solid 3px #FFFFF3;
+        border: solid 3px #FFFFF3;
 
         img {
             border-radius: 10px;
@@ -69,4 +72,77 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+
+//--------- RESOLUTION : 1000px to 1399px screens (small laptops)
+
+@media screen and (max-width:1399px) {
+    //General settings
+
+    .main_container {
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    //Center div (icons + pic)
+
+    .main_center {
+        gap: 30px;
+
+        //Icons
+        .center_icons {
+
+            img {
+                height: 40px;
+            }
+
+            .trash_icon,
+            .about_icon {
+                gap: 10px;
+            }
+        }
+
+        //Img
+
+        .center {
+
+            img {
+                height: 230px;
+                width: 180px;
+
+            }
+        }
+
+    }
+
+}
+
+
+
+//-------- RESOLUTION : 999px to 768px screens (tablets)
+
+@media screen and (max-width:999px) {
+    //General settings
+
+    .main_container {
+        gap: 30px;
+    }
+
+    //Center div (icons + pic)
+
+    .main_center {
+
+        //Img
+        .center {
+
+            img {
+                height: 220px;
+                width: 150px;
+
+            }
+        }
+
+    }
+
 }

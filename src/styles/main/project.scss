@@ -1,3 +1,4 @@
+//------- RESOLUTION : 1400px and more (base)
 //Settings for one project
 
 .project {
@@ -14,12 +15,13 @@
 
     p {
         padding: 3px 5px;
+        text-align: center;
     }
 }
 
 .main_page {
     flex-basis: 25%;
-  }
+}
 
 .selected {
     p {
@@ -27,3 +29,49 @@
         color: #FFFFF3;
     }
 }
+
+//------- RESOLUTION : 1000px to 1399px (small laptops)
+
+@media screen and (max-width:1399px) {
+
+    //Settings for one project
+
+    .project {
+        gap: 5px;
+
+        img {
+            width: 40px;
+        }
+
+        p {
+            padding: 3px 5px;
+        }
+    }
+
+}
+
+
+//----- RESOLUTION : 999px to 768px (tablets)
+
+@media screen and (max-width:999px) {
+
+    //Settings for one project
+
+    .project {
+        gap: 5px;
+
+        img {
+            width: 40px;
+        }
+
+        p {
+            padding: 3px 5px;
+        }
+    }
+
+    .main_page {
+        flex-basis: 50%;
+    }
+
+}
+

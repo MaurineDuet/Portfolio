@@ -1,3 +1,5 @@
+//-------- RESOLUTION : 1400px and more && 1000px to 1400px screens (base + small laptops)
+
 //Base settings for one note
 
 .note {
@@ -10,13 +12,12 @@
     flex-direction: column;
     align-items: center;
     padding-top: 5px;
-    
+
     .note_title {
         height: 30px;
         width: 190px;
 
         background-color: #CDCAC6;
-
 
         display: flex;
         justify-content: flex-end;
@@ -38,4 +39,38 @@
         line-height: 20px;
         padding: 10px;
     }
+}
+
+//------- RESOLUTION : 999px to 768px (tablets)
+
+@media screen and (max-width:999px) {
+
+    //Base settings for one note
+
+    .note {
+        height: 120px;
+        width: 120px;
+        padding-top: 2px;
+
+        .note_title {
+            height: 30px;
+            width: 116px;
+
+            padding-right: 10px;
+
+        }
+
+        img {
+            height: 40px;
+            width: 116px;
+            margin-top: 2px;
+        }
+
+        .note_text {
+            height: 70px;
+            line-height: 10px;
+            font-size: 0.7em;
+        }
+    }
+
 }

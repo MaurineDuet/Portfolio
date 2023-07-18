@@ -28,6 +28,8 @@ body,
     color: #474350;
 }
 
+
+// ------------- RESOLUTION : 1400px and more screens (base)
 .container {
     width: 1400px;
     min-height: 95vh;
@@ -62,4 +64,53 @@ button {
     text-align: center;
 
     text-transform: uppercase;
+}
+
+//------------- RESOLUTION : 1000px to 1399px screens (small laptops)
+
+@media screen and (max-width:1399px) {
+    .container {
+        width: 1000px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 3px 20px;
+    }
+}
+
+//------------- RESOLUTION : 999px to 768px screens (tablets)
+
+@media screen and (max-width:999px) {
+    .container {
+        width: 750px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 3px 20px;
+    }
+}
+
+// ------------- RESOLUTION : 767px to 300px (phones)
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 100%;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    //Basic elements
+
+    h2 {
+        font-size: 1.8em;
+    }
 }

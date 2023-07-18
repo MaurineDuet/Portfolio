@@ -6,20 +6,20 @@ import React from 'react'
 
 function Projects(props) {
 
-    const { title, height, mainHeight } = props //Defining needed props
+    const { title/* , height, mainHeight */ } = props //Defining needed props
     const projectCount = React.Children.count(props.children) //Initializing count function for Projects children (in this case, a Project)
 
-    const projectsStyle = {
+/*     const projectsStyle = {
         height: height || 'auto', // Use the passed height or set it to 'auto' if not provided
     };
 
     const projectsMainStyle = {
         height: mainHeight || 'auto', // Use the passed mainHeight or set it to 'auto' if not provided
-    }
+    } */
 
     return (
 
-        <div className='projects' style={projectsStyle}>
+        <div className='projects' /* style={projectsStyle} */>
 
             <div className='projects_title'>
                 <h3>C:/Maurine_Duet/Projets/{title}</h3>
@@ -33,7 +33,7 @@ function Projects(props) {
                 </nav>
             </div>
 
-            <div className='projects_main' style={projectsMainStyle}>
+            <div className='projects_main' /* style={projectsMainStyle} */>
                 {props.children}
             </div>
 

@@ -1,3 +1,5 @@
+//---------- RESOLUTION : 1400px and more (base)
+
 //Basic settings
 
 .landing_container_overall {
@@ -104,14 +106,14 @@
                 border-radius: 0;
                 border: solid 2px #474350;
                 box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
-            
+
                 color: inherit;
                 font-family: inherit;
                 font-size: 1.2em;
                 background-color: #C2DCFF;
-            
+
                 cursor: pointer;
-            
+
                 text-decoration: none;
                 text-align: center;
 
@@ -119,14 +121,14 @@
                     background-color: #FFADC7;
                 }
             }
-            
+
         }
 
     }
 
 
     //Frame footer
-    
+
     .landing_footer {
         position: absolute;
         z-index: 3;
@@ -146,6 +148,153 @@
             display: flex;
             align-items: baseline;
             gap: 10px;
+        }
+
+    }
+
+}
+
+//---------- RESOLUTION : 1000px to 1399px (small laptops) && 999px to 768px (tablets)
+
+@media screen and (max-width:1399px) {
+
+    //Main frame settings
+
+    .landing_main_frame {
+        width: 800px;
+        height: 600px;
+
+        //Stars 
+
+        .stars {
+            gap: 330px;
+            bottom: 330px;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        //Profile (img + title + buttons)
+
+        .profile {
+
+            .stars_background {
+                width: 750px;
+                height: 230px;
+            }
+
+            .wallpaper {
+                width: 750px;
+                height: 300px;
+            }
+
+            .profile_infos {
+                top: 180px;
+                gap: 20px;
+
+                h2 {
+                    font-size: 1.7em;
+                }
+
+                img {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+
+            //Landing buttons 
+
+            .landing_buttons {
+                padding-top: 125px;
+
+                .link_button {
+                    padding: 10px 60px;
+                    font-size: 1.1em;
+                }
+
+            }
+
+        }
+
+        //Frame footer
+
+        .landing_footer {
+            margin-top: 545px;
+
+            img {
+                height: 40px;
+            }
+
+            .power_icons,
+            .utils_icons {
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+            }
+
+        }
+
+    }
+
+}
+
+// ------------- RESOLUTION : 767px to 300px (phones)
+
+@media screen and (max-width:767px) {
+
+    //Main frame settings
+
+    .landing_main_frame {
+        width: 100%;
+        min-height: 100vh;
+
+        //Computer frame
+        .computer_frame {
+            display: none;
+        }
+
+        //Stars 
+
+        .stars {
+            display: none;
+        }
+
+        //Profile (img + title + buttons)
+
+        .profile {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .stars_background {
+                width: 100%;
+                height: 350px;
+            }
+
+            .wallpaper {
+                display: none;
+            }
+
+            .profile_infos {
+                top: 300px;
+            }
+
+            //Landing buttons 
+
+            .landing_buttons {
+                padding-top: 150px;
+
+            }
+
+        }
+
+
+        //Frame footer
+
+        .landing_footer {
+            display: none;
+
         }
 
     }

@@ -1,3 +1,5 @@
+//------- RESOLUTION : 1400px and more screens (base)
+
 //Base settings for the notes section
 
 .notes {
@@ -86,6 +88,85 @@
         padding-left: 10px;
 
         box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+
+    }
+
+}
+
+//------- RESOLUTION : 1000px to 1399px (small laptops)
+
+@media screen and (max-width:1399px) {
+
+    //Base settings for the notes section
+
+    .notes {
+        width: 280px;
+        height: 400px;
+
+        //General section title
+
+        .notes_title {
+
+            h3 {
+                height: 40px;
+                width: 270px;
+            }
+        }
+
+
+        //Main div
+
+        .notes_main {
+            width: 270px;
+            height: 270px;
+            padding: 10px 20px;
+        }
+
+        //Notes footer
+
+        .notes_footer {
+            width: 270px;
+        }
+
+    }
+
+}
+
+
+
+//------- RESOLUTION : 999px to 768px (tablets)
+
+@media screen and (max-width:999px) {
+
+    //Base settings for the notes section
+
+    .notes {
+        width: 200px;
+        height: 350px;
+
+        //General section title
+
+        .notes_title {
+
+            h3 {
+                height: 30px;
+                width: 190px;
+            }
+        }
+
+
+        //Main div
+
+        .notes_main {
+            width: 190px;
+            height: 230px;
+        }
+
+        //Notes footer
+
+        .notes_footer {
+            width: 190px;
+        }
 
     }
 

@@ -1,3 +1,5 @@
+//-------- RESOLUTION : 1400px and more screens (base)
+
 //General footer basic settings
 
 footer {
@@ -49,6 +51,7 @@ footer {
 
                 img {
                     height: 20px;
+                    width: 20px;
                 }
 
                 &:hover {
@@ -97,6 +100,59 @@ footer {
             img {
                 height: 17px;
                 width: 17px;
+            }
+        }
+    }
+}
+
+
+//-------- RESOLUTION : 1000px to 1399px (small laptops) && 999px to 768px (tablets)
+
+@media screen and (max-width:1399px) {
+  
+    //General footer basic settings
+
+    footer {
+        //Start button
+
+        button {
+            margin-left: 30px;
+        }
+
+        .footer_menu {
+            bottom: 5vh;
+            height: 150px;
+
+            .menu_logo {
+                height: 148px;
+            }
+
+            .menu_buttons {
+
+                .menu_button {
+                    padding: 5px 30px;
+                    gap: 10px;
+
+                    img {
+                        height: 17px;
+                        width: 17px;
+                    }
+
+                }
+            }
+        }
+
+        //Right nav (fake buttons)
+
+        nav {
+
+
+            ul {
+
+                li {
+                    padding: 5px 10px;
+                    height: 25px;
+                }
             }
         }
     }

@@ -78,13 +78,13 @@ function Main() {
 
                 <div className='main_left'>
 
-                    <Projects title='Personnels' height="350px" mainHeight="220px" >
+                    <Projects title='Personnels'/*  height="350px" mainHeight="220px"  */>
                         {personnelProjects.map((project) =>
                             <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true}/>
                         )}
                     </Projects>
 
-                    <Projects title='Formation' height="250px" mainHeight="120px">
+                    <Projects title='Formation' /* height="250px" mainHeight="120px" */>
                         {formationProjects.map((project) =>
                             <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate )} isMainPage={true}/>
                         )}

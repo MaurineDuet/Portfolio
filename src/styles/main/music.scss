@@ -1,3 +1,4 @@
+//------- RESOLUTION : 1400px and more screens (base)
 //Base settings
 
 .music {
@@ -53,4 +54,59 @@
         }
 
     }
+}
+
+//--------- RESOLUTION : 1000px to 1399px (small laptops)
+
+@media screen and (max-width:1399px) {
+
+    //Base settings
+
+    .music {
+        width: 280px;
+        height: 120px;
+
+        //Title
+
+        h3 {
+            width: 270px;
+        }
+
+        //Main div
+
+        .music_main {
+            height: 60px;
+            gap: 10px;
+
+            .music_icons {
+                height: 20px;
+
+                img {
+                    height: 20px;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+//-------- RESOLUTION : 999px to 768px (small laptops)
+
+@media screen and (max-width:999px) {
+
+    //Base settings
+
+    .music {
+        width: 200px;
+        height: 120px;
+
+        //Title
+
+        h3 {
+            width: 190px;
+        }
+    }
+
 }
