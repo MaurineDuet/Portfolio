@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom'
 
 //Images
 import ComputerFrame from '../assets/frame.png'
+import PhoneFrame from '../assets/phone_frame.png'
 import StarsBackground from '../assets/stars_background.jpeg'
 import Wallpaper from '../assets/screen_wallpaper.jpg'
 import ProfilePic from '../assets/astronaute.gif'
 import Stars1 from '../assets/stars_1.svg'
 import Stars2 from '../assets/stars_2.svg'
+import CloudIcon from '../assets/cloud_icon_phone_landing.svg'
 
 //Components
 /* import Clouds from '../components/clouds' */
@@ -29,6 +31,12 @@ function Landing() {
                         <div className='landing_main_frame'>
 
                               <img src={ComputerFrame} alt="Cadre d'écran d'ordinateur" className='computer_frame' />
+                              <img src={PhoneFrame} alt="Cadre d'écran de téléphone" className='phone_frame' />
+
+                              <div className='phone_logo'>
+                                    <img src={CloudIcon} alt="Cadre d'écran de téléphone" />
+                                    <p>LilacBerry</p>
+                              </div>
 
                               <div className='profile'>
                                     <img src={StarsBackground} alt="Fond d'écran étoiles" className='stars_background' />
