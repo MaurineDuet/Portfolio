@@ -61,6 +61,16 @@ function Landing() {
                                           </Link>
                                     </div>
 
+                                    <div className='landing_buttons_phone'>
+                                          <Link to='/mainphone' className='link_button'>
+                                                mon univers
+                                          </Link>
+                                          <Link to='/cvphone' className='link_button'>
+                                                mon CV
+                                          </Link>
+                                    </div>
+
+
                               </div>
 
                               <LandingFooter></LandingFooter>

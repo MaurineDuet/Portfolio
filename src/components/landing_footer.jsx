@@ -35,6 +35,8 @@ function LandingFooter() {
                         <img src={Printer} alt="icone imprimante" />
                   </div>
 
+                  {/* Version téléphone */}
+                  
                   <div className='phone_icons_left'>
                         <img src={PhoneIcon} alt="bouton power" />
                         <img src={CloudIcon} alt="logo nuage" />

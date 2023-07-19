@@ -1,0 +1,202 @@
+.phone_header,
+.date_and_hour,
+.phone_main_content,
+.music {
+    display: none;
+}
+
+.main_phone_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/background_universe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .redirection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+
+        width: 500px;
+        height: 400px;
+
+        background: linear-gradient(#FFD0D0, #FDF0D8);
+        box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+
+        h3 {
+            display: flex;
+            align-items: center;
+            width: 494px;
+            height: 40px;
+
+            background-color: #30345A;
+            color: #FFFFF3;
+
+            margin: 5px;
+            padding-left: 10px;
+        }
+
+        .error_main_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+            gap: 30px;
+
+            .error_main_title {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                
+                h4 {
+                    font-size: 2em;
+                }
+
+                img {
+                    height: 70px;
+                }
+            }
+
+            p {
+                line-height: 20px;
+                padding: 0 50px;
+            }
+        }
+
+
+        .redirection_button {
+            padding: 10px 50px;
+            border-radius: 0;
+            border: solid 1px #474350;
+            box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+            font-family: inherit;
+            color: inherit;
+
+            cursor: pointer;
+
+            text-decoration: none;
+            text-align: center;
+            line-height: 20px;
+
+            background-color: #C2DCFF;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .main_phone_container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url('../../assets/background_universe.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .redirection {
+            display: none;
+        }
+
+        .phone_header {
+            padding: 0 10px;
+
+            img {
+                height: 20px;
+                width: 20px;
+                object-fit: contain;
+            }
+
+            .parameters_icon {
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+            }
+
+            .phone_main_icons_left {
+                display: flex;
+                gap: 10px;
+                justify-content: flex-start;
+                align-items: center;
+
+                .phone_main_messages {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+
+            .phone_main_icons_right {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+        }
+
+        .date_and_hour {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 0;
+            background-color: #CDCAC6;
+            border-top: 3px solid #474350;
+        }
+
+        .phone_main_content {
+            display: flex;
+            padding: 50px 30px;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            height: 75vh;
+
+            .phone_app {
+                background: linear-gradient(#FFD0D0, #FDF0D8);
+                /*             border-radius: 10px;
+            border: solid 2px #FFFFF3; */
+                box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 10px;
+                height: 130px;
+                width: 130px;
+
+                text-decoration: none;
+                color: inherit;
+                text-align: center;
+
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .girl_pic {
+                height: 130px;
+                width: 130px;
+                object-fit: cover;
+                border-radius: 10px;
+                border: solid 2px #FFFFF3;
+            }
+        }
+
+        .music {
+            display: flex;
+        }
+
+    }
+
+}

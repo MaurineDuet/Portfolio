@@ -5,7 +5,9 @@
 .main_left {
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
     gap: 30px;
+    height: 90vh;
 
     .projects {
         display: flex;
