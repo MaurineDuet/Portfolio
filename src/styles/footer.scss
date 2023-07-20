@@ -109,7 +109,7 @@ footer {
 //-------- RESOLUTION : 1000px to 1399px (small laptops) && 999px to 768px (tablets)
 
 @media screen and (max-width:1399px) {
-  
+
     //General footer basic settings
 
     footer {
@@ -155,5 +155,14 @@ footer {
                 }
             }
         }
+    }
+}
+
+//-------- RESOLUTION : 350px to 767 px (phone)
+
+@media screen and (max-width:1399px) {
+
+    footer {
+        display: none;
     }
 }

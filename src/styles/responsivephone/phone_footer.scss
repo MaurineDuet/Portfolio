@@ -1,0 +1,14 @@
+.phone_footer{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: #CDCAC6;
+    font-size: 1.1em;
+    font-weight: bolder;
+    height: 5vh;
+
+    .footer_link {
+        text-decoration: none;
+        color: inherit;
+    }
+}

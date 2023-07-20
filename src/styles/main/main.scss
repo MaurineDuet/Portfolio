@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .redirection_main_computer {
+        display: none;
+    }
 }
 
 .main_container {
@@ -19,6 +23,15 @@
     align-items: flex-start;
     gap: 50px;
     padding-top: 40px;
+}
+
+
+.main_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 30px;
+    height: 90vh;
 }
 
 //Center div (icons + pic)
@@ -141,6 +154,26 @@
                 width: 150px;
 
             }
+        }
+
+    }
+
+}
+
+//-------- RESOLUTION : 768px to 350px screens (phone)
+
+
+@media screen and (max-width:767px) {
+
+    .main_overall_container {
+        justify-content: center;
+
+        .redirection_main_computer {
+            display: flex;
+        }
+
+        .main_container {
+            display: none;
         }
 
     }

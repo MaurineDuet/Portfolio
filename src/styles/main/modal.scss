@@ -150,3 +150,55 @@
         }
     }
 }
+
+//--------- RESOLUTION : 350px to 767px (phones)
+
+@media screen and (max-width:767px) {
+
+    .modal_overlay {
+
+        background-color: rgba(0, 0, 0, 0.6);
+
+        .modal {
+            width: 90%;
+            height: auto;
+
+            //Title (blue bar + params)
+
+            .modal_title {
+                width: 100%;
+                align-items: center;
+
+                //Blue bar
+
+                .modal_title_up {
+                    width: 98%;
+                }
+
+                //Params
+
+                nav {
+                    display: none;
+                }
+
+            }
+
+            //Modal main div
+
+            .modal_main {
+                width: 98%;
+                height: 60vh;
+                gap: 30px;
+                padding: 50px 30px;
+            }
+
+            //Modal footer
+
+            .modal_footer {
+                width: 98%;
+                margin: 5px;
+            }
+        }
+    }
+
+}

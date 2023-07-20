@@ -2,6 +2,7 @@
 import '../styles/main/main.scss'
 import '../styles/main/projects.scss'
 import '../styles/main/notes.scss'
+import '../styles/error.scss'
 
 //Basic
 import { useState, useEffect } from 'react'
@@ -27,6 +28,8 @@ import ProfilePic from '../assets/universe_girl_pic.jpg'
 import Note1 from '../assets/note_1_img.jpg'
 import Note2 from '../assets/note_2_img.jpg'
 import Note3 from '../assets/note_3_img.jpg'
+
+import AlertIcon from '../assets/alert_icon.svg'
 
 function Main() {
 
@@ -74,19 +77,42 @@ function Main() {
 
     return (
         <div className="main_overall_container">
+
+            <div className='redirection_main_computer'>
+
+                <h3>Error</h3>
+
+                <div className='error_main_content'>
+
+                    <div className='error_main_title'>
+                        <img src={AlertIcon} alt="Icone qui indique une alerte" />
+                        <h4>ERROR <br /> WRONG FORMAT</h4>
+                    </div>
+                    <p>Pour une meilleure expérience du site, cette page n'est accessible que pour les utilisateurs naviguant sur tablette ou ordinateur.
+                    </p>
+                    <p>Si vous naviguez sur téléphone, veuillez cliquer sur le bouton ci-dessous !</p>
+
+                    <Link to="/mainphone" className='redirection_button'>
+                        Transfert. Scanner. <br />
+                        Virtualisation !
+                    </Link>
+                </div>
+
+            </div>
+
             <div className="container main_container">
 
                 <div className='main_left'>
 
                     <Projects title='Personnels'/*  height="350px" mainHeight="220px"  */>
                         {personnelProjects.map((project) =>
-                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true}/>
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
                         )}
                     </Projects>
 
                     <Projects title='Formation' /* height="250px" mainHeight="120px" */>
                         {formationProjects.map((project) =>
-                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate )} isMainPage={true}/>
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
                         )}
                     </Projects>
 
@@ -129,7 +155,7 @@ function Main() {
 
             <Footer></Footer>
 
-        </div>
+        </div >
     )
 }
 

@@ -1,0 +1,96 @@
+.phone_header_and_main_content,
+.music {
+    display: none;
+}
+
+.main_phone_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/background_universe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .redirection {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .main_phone_container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-image: url('../../assets/background_universe.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .redirection {
+            display: none;
+        }
+
+        .phone_header_and_main_content {
+            display: flex;
+            flex-direction: column;
+
+
+            .phone_main_content {
+                display: flex;
+                padding: 50px 30px;
+                justify-content: center;
+                align-items: stretch;
+                overflow-x: scroll;
+                gap: 30px;
+                flex-wrap: wrap;
+                height: 75vh;
+
+                .phone_app {
+                    background: linear-gradient(#FFD0D0, #FDF0D8);
+                    /*             border-radius: 10px;
+            border: solid 2px #FFFFF3; */
+                    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 10px;
+                    height: 130px;
+                    width: 130px;
+
+                    text-decoration: none;
+                    color: inherit;
+                    text-align: center;
+
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+
+                .girl_pic {
+                    height: 130px;
+                    width: 130px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    border: solid 2px #FFFFF3;
+                }
+            }
+
+        }
+
+        .music {
+            display: flex;
+        }
+
+    }
+
+}

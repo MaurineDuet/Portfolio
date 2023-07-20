@@ -57,3 +57,17 @@
     }
 
 }
+
+
+//--------- RESOLUTION : 350px to 767px (phones)
+
+@media screen and (max-width:767px) {
+    .collapsible {
+        .toggle {
+            img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
+}

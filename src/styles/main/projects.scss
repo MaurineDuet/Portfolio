@@ -2,94 +2,87 @@
 
 //Basic settings
 
-.main_left {
+.projects {
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    gap: 30px;
-    height: 90vh;
+    align-items: center;
 
-    .projects {
+    width: 550px;
+    height: 310px;
+
+    background-color: #CDCAC6;
+    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+
+    //Top frame with title and tool bar
+
+    .projects_title {
         display: flex;
         flex-direction: column;
-        align-items: center;
 
-        width: 550px;
-        height: 310px;
-
-        background-color: #CDCAC6;
-        box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
-
-        //Top frame with title and tool bar
-
-        .projects_title {
-            display: flex;
-            flex-direction: column;
-
-            h3 {
-                display: flex;
-                align-items: center;
-
-                height: 40px;
-                width: 540px;
-
-                background-color: #30345A;
-                color: #FFFFF3;
-
-                margin: 5px;
-                padding-left: 10px;
-            }
-
-
-            nav {
-                height: 30px;
-                display: flex;
-                align-items: center;
-                padding-left: 15px;
-
-                ul {
-                    display: flex;
-                    gap: 7px;
-                }
-            }
-        }
-
-        //Main frame with projects icons
-
-        .projects_main {
-            width: 540px;
-            height: 180px;
-
-            background: linear-gradient(#FFD0D0, #FDF0D8);
-            box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
-
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            row-gap: 30px;
-            flex-wrap: wrap;
-            overflow: scroll;
-
-            padding: 25px 30px;
-        }
-
-        //Bottom of the frame with number of projects
-
-        .projects_footer {
+        h3 {
             display: flex;
             align-items: center;
 
-            width: 540px;
             height: 40px;
-            margin-top: 5px;
+            width: 540px;
+
+            background-color: #30345A;
+            color: #FFFFF3;
+
+            margin: 5px;
             padding-left: 10px;
+        }
 
-            box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
+        nav {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+
+            ul {
+                display: flex;
+                gap: 7px;
+            }
         }
     }
 
+    //Main frame with projects icons
+
+    .projects_main {
+        width: 540px;
+        height: 180px;
+
+        background: linear-gradient(#FFD0D0, #FDF0D8);
+        box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 30px;
+        flex-wrap: wrap;
+        overflow: scroll;
+
+        padding: 25px 30px;
+    }
+
+    //Bottom of the frame with number of projects
+
+    .projects_footer {
+        display: flex;
+        align-items: center;
+
+        width: 540px;
+        height: 40px;
+        margin-top: 5px;
+        padding-left: 10px;
+
+        box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+
+    }
 }
+
+
 
 //--------- RESOLUTION : 1000px to 1399px (small laptops)
 
@@ -97,41 +90,40 @@
 
     //Basic settings
 
-    .main_left {
 
-        .projects {
-            width: 400px;
-            height: 260px;
+    .projects {
+        width: 400px;
+        height: 260px;
 
-            //Top frame with title and tool bar
+        //Top frame with title and tool bar
 
-            .projects_title {
+        .projects_title {
 
-                h3 {
-                    width: 390px;
-                }
-            }
-
-            //Main frame with projects icons
-
-            .projects_main {
-                width: 390px;
-                height: 130px;
-                row-gap: 20px;
-
-                padding: 20px;
-            }
-
-            //Bottom of the frame with number of projects
-
-            .projects_footer {
+            h3 {
                 width: 390px;
             }
         }
 
+        //Main frame with projects icons
+
+        .projects_main {
+            width: 390px;
+            height: 130px;
+            row-gap: 20px;
+
+            padding: 20px;
+        }
+
+        //Bottom of the frame with number of projects
+
+        .projects_footer {
+            width: 390px;
+        }
     }
 
 }
+
+
 
 
 //-------- RESOLUTION : 999px to 768px (tablets)
@@ -140,37 +132,89 @@
 
     //Basic settings
 
-    .main_left {
 
-        .projects {
-            width: 300px;
-            height: 260px;
+    .projects {
+        width: 300px;
+        height: 260px;
 
-            //Top frame with title and tool bar
+        //Top frame with title and tool bar
 
-            .projects_title {
+        .projects_title {
 
-                h3 {
-                    width: 290px;
-                    height: 30px;
-                }
-            }
-
-            //Main frame with projects icons
-
-            .projects_main {
-                width: 290px;
-                height: 150px;
-            }
-
-            //Bottom of the frame with number of projects
-
-            .projects_footer {
+            h3 {
                 width: 290px;
                 height: 30px;
             }
         }
 
+        //Main frame with projects icons
+
+        .projects_main {
+            width: 290px;
+            height: 150px;
+        }
+
+        //Bottom of the frame with number of projects
+
+        .projects_footer {
+            width: 290px;
+            height: 30px;
+        }
+    }
+
+}
+
+
+
+//--------- RESOLUTION : 767px to 350px (phones)
+
+@media screen and (max-width:767px) {
+
+    //Basic settings
+
+    .projects {
+        justify-content: space-between;
+        align-items: stretch;
+
+        width: 100%;
+        height: 71vh;
+
+        background-color: transparent;
+        box-shadow: none;
+
+        //Top frame with title and tool bar
+
+        .projects_title {
+            display: none;
+        }
+
+        //Main frame with projects icons
+
+        .projects_main {
+            width: 100%;
+            height: 78vh;
+
+            background: transparent;
+            box-shadow: none;
+
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+
+            row-gap: 0px;
+            gap: 20px;
+            flex-wrap: wrap;
+            overflow: scroll;
+
+            padding: 30px 30px 50px 30px;
+        }
+
+        //Bottom of the frame with number of projects
+
+        .projects_footer {
+            display: none;
+
+        }
     }
 
 }

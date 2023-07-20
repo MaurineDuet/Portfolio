@@ -1,0 +1,25 @@
+.phone_projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../assets/background_universe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .phone_projects_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #FFFFF3;
+        height: 6vh;
+
+        background-color: #30345A;
+        margin: 10px 5px;
+    }
+
+    .phone_footer {
+        display: flex;
+    }
+}
