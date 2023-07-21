@@ -2,6 +2,7 @@
 import '../styles/responsivephone/phone_projects.scss'
 
 //Components
+import ErrorPhone from '../components/error_phone_version'
 import PhoneHeader from '../components/phoneresponsive/phone_header'
 import Projects from '../components/main/projects'
 import Project from '../components/main/project'
@@ -55,6 +56,9 @@ function FormationProjects() {
 
     return (
         <div className="phone_projects">
+
+            <ErrorPhone></ErrorPhone>
+
             <PhoneHeader></PhoneHeader>
 
             <p className='phone_projects_title'>Projets de formation</p>

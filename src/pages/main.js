@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 //Components
+import ErrorPc from '../components/error_pc_version'
 import Projects from '../components/main/projects'
 import Project from '../components/main/project'
 import Footer from '../components/footer'
@@ -28,8 +29,6 @@ import ProfilePic from '../assets/universe_girl_pic.jpg'
 import Note1 from '../assets/note_1_img.jpg'
 import Note2 from '../assets/note_2_img.jpg'
 import Note3 from '../assets/note_3_img.jpg'
-
-import AlertIcon from '../assets/alert_icon.svg'
 
 function Main() {
 
@@ -78,27 +77,7 @@ function Main() {
     return (
         <div className="main_overall_container">
 
-            <div className='redirection_main_computer'>
-
-                <h3>Error</h3>
-
-                <div className='error_main_content'>
-
-                    <div className='error_main_title'>
-                        <img src={AlertIcon} alt="Icone qui indique une alerte" />
-                        <h4>ERROR <br /> WRONG FORMAT</h4>
-                    </div>
-                    <p>Pour une meilleure expérience du site, cette page n'est accessible que pour les utilisateurs naviguant sur tablette ou ordinateur.
-                    </p>
-                    <p>Si vous naviguez sur téléphone, veuillez cliquer sur le bouton ci-dessous !</p>
-
-                    <Link to="/mainphone" className='redirection_button'>
-                        Transfert. Scanner. <br />
-                        Virtualisation !
-                    </Link>
-                </div>
-
-            </div>
+            <ErrorPc></ErrorPc>
 
             <div className="container main_container">
 

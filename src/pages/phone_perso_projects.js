@@ -3,6 +3,7 @@ import '../styles/responsivephone/phone_main.scss'
 import '../styles/responsivephone/phone_projects.scss'
 
 //Components
+import ErrorPhone from '../components/error_phone_version'
 import PhoneHeader from '../components/phoneresponsive/phone_header'
 import Projects from '../components/main/projects'
 import Project from '../components/main/project'
@@ -12,10 +13,6 @@ import PhoneFooter from '../components/phoneresponsive/phone_footer'
 //Basic
 import { useState, useEffect } from 'react'
 import { useFetch } from '../hooks/fetch'
-import { Link } from 'react-router-dom'
-
-//Error
-import AlertIcon from '../assets/alert_icon.svg'
 
 function PersoProjects() {
 
@@ -61,28 +58,7 @@ function PersoProjects() {
     return (
         <div className="phone_projects">
 
-            {/*   <div className='redirection'>
-
-                <h3>Error</h3>
-
-                <div className='error_main_content'>
-
-                    <div className='error_main_title'>
-                        <img src={AlertIcon} alt="Icone qui indique une alerte" />
-                        <h4>ERROR <br /> WRONG FORMAT</h4>
-                    </div>
-                    <p>Pour une meilleure expérience du site, cette page n'est accessible que pour les utilisateurs naviguant sur téléphone.
-                        <br /> Si vous naviguez sur un autre appareil, veuillez cliquer sur le bouton ci-dessous !
-                    </p>
-
-                    <Link to="/main" className='redirection_button'>
-                        Transfert. Scanner. <br />
-                        Virtualisation !
-                    </Link>
-
-                </div>
-
-            </div> */}
+            <ErrorPhone></ErrorPhone>
 
             <PhoneHeader></PhoneHeader>
 

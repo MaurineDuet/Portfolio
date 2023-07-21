@@ -1,14 +1,22 @@
-.phone_footer{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    background-color: #CDCAC6;
-    font-size: 1.1em;
-    font-weight: bolder;
-    height: 5vh;
+.phone_footer {
+    display: none;
+}
 
-    .footer_link {
-        text-decoration: none;
-        color: inherit;
+@media screen and (max-width:767px) {
+
+    .phone_footer {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        background-color: #CDCAC6;
+        font-size: 1.1em;
+        font-weight: bolder;
+        height: 5vh;
+
+        .footer_link {
+            text-decoration: none;
+            color: inherit;
+        }
     }
+
 }
