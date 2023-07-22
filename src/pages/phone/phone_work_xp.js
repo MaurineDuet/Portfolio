@@ -1,14 +1,14 @@
 //Components
-import ErrorPhone from '../components/error_phone_version'
-import PhoneHeader from '../components/phoneresponsive/phone_header'
-import Projects from '../components/main/projects'
-import Project from '../components/main/project'
-import PhoneModal from '../components/phoneresponsive/phone_modal'
-import PhoneFooter from '../components/phoneresponsive/phone_footer'
+import ErrorPhone from '../../components/error/error_phone_version'
+import PhoneHeader from '../../components/phoneresponsive/phone_header'
+import Projects from '../../components/main/projects'
+import Project from '../../components/main/project'
+import PhoneModal from '../../components/phoneresponsive/phone_modal'
+import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 
 //Basic
 import { useState, useEffect } from 'react'
-import { useFetch } from '../hooks/fetch'
+import { useFetch } from '../../hooks/fetch'
 
 function CvWork() {
 

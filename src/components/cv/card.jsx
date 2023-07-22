@@ -4,6 +4,7 @@ import '../../styles/cv/card.scss'
 //Basic
 import React from 'react'
 
+//Components
 import Project from '../main/project'
 
 //Images

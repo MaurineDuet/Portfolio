@@ -7,6 +7,7 @@ import Next from '../../assets/next_icon.svg'
 import Previous from '../../assets/previous_icon.svg'
 
 function Music() {
+    
     return (
         <div className='music'>
             <h3>Musique</h3>

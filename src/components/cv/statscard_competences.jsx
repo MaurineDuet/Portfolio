@@ -1,3 +1,4 @@
+//Style
 import '../../styles/cv/card.scss'
 
 //Images
@@ -9,8 +10,8 @@ import JournalingIcon from '../../assets/cv_journaling_icon.svg'
 import SunIcon from '../../assets/cv_sun_icon.svg'
 
 function Competences() {
-    return (
 
+    return (
         <div className='cv_card_details'>
 
             <div className='cv_card_title cv_card_global_skills'>
@@ -85,9 +86,6 @@ function Competences() {
             </div>
 
         </div >
-
-
-
     )
 }
 

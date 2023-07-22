@@ -1,5 +1,4 @@
-.phone_header_and_main_content,
-.music {
+.phone_header_and_main_content {
     display: none;
 }
 
@@ -16,6 +15,10 @@
 
     .redirection {
         display: flex;
+    }
+
+    .music {
+        display: none;
     }
 
 }

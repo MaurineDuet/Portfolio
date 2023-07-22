@@ -4,13 +4,13 @@ import '../../styles/cv/profile.scss'
 //Images
 /* import CvProfilePic from '../../assets/cv_profile_pic.jpg' */
 import CvProfileVid from '../../assets/Profile_pic_vid.mp4'
-
 import CvMail from '../../assets/cv_mail_icon.svg'
 import CvLocation from '../../assets/cv_location_icon.svg'
 import CvMe from '../../assets/cv_me_icon.svg'
 import CvSendMail from '../../assets/cv_send_mail_icon.svg'
 
 function Profile() {
+    
     return (
         <section className="cv_profile">
 

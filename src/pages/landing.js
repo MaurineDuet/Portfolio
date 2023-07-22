@@ -18,7 +18,7 @@ import CloudIcon from '../assets/cloud_icon_phone_landing.svg'
 
 //Components
 /* import Clouds from '../components/clouds' */
-import LandingFooter from '../components/landing_footer'
+import LandingFooter from '../components/footer/landing_footer'
 
 function Landing() {
 

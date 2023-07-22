@@ -1,21 +1,21 @@
 //Style
-import '../styles/responsivephone/phone_main.scss'
-import '../styles/error.scss'
+import '../../styles/responsivephone/phone_main.scss'
+import '../../styles/error.scss'
 
 //Basic
 import { Link } from 'react-router-dom'
 
 //Images
-import FileIcon from '../assets/file.svg'
-import AboutMe from '../assets/about_me_phone.svg'
-import SwitchGirl from '../assets/girl_switch.jpg'
-import PhoneGirl from '../assets/girl_phone.jpg'
-import NotesIcon from '../assets/cv_notes_icon.svg'
+import FileIcon from '../../assets/file.svg'
+import AboutMe from '../../assets/about_me_phone.svg'
+import SwitchGirl from '../../assets/girl_switch.jpg'
+import PhoneGirl from '../../assets/girl_phone.jpg'
+import NotesIcon from '../../assets/cv_notes_icon.svg'
 
 //Component 
-import ErrorPhone from '../components/error_phone_version'
-import PhoneHeader from '../components/phoneresponsive/phone_header'
-import Music from '../components/main/music'
+import ErrorPhone from '../../components/error/error_phone_version'
+import PhoneHeader from '../../components/phoneresponsive/phone_header'
+import Music from '../../components/main/music'
 
 function MainPhone() {
 

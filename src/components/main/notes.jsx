@@ -1,6 +1,8 @@
-import React from 'react'
-
+//Style
 import '../../styles/main/notes.scss'
+
+//Basic
+import React from 'react'
 
 function Notes(props) {
     const noteCount = React.Children.count(props.children) //Initializing count function for 'Notes' children (in this case, a Note)

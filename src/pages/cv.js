@@ -8,7 +8,7 @@ import StarsBackground from '../assets/stars_background.jpeg'
 
 //Component
 import Header from '../components/cv/header'
-import Footer from '../components/footer'
+import Footer from '../components/footer/footer'
 import Profile from '../components/cv/profile'
 import Card from '../components/cv/card'
 import StatsCard from '../components/cv/statscard'

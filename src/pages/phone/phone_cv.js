@@ -1,20 +1,19 @@
 //Style
-import '../styles/cv/cv.scss'
-import '../styles/responsivephone/phone_cv.scss'
+import '../../styles/cv/cv.scss'
+import '../../styles/responsivephone/phone_cv.scss'
 
 //Image
-import WorkIcon from '../assets/work_icon.svg'
-import EducationIcon from '../assets/education_icon.svg'
-import StatsIcon from '../assets/skills_icon.svg'
+import WorkIcon from '../../assets/work_icon.svg'
+import EducationIcon from '../../assets/education_icon.svg'
+import StatsIcon from '../../assets/skills_icon.svg'
 
 //Component
-import PhoneHeader from '../components/phoneresponsive/phone_header'
-import PhoneFooter from '../components/phoneresponsive/phone_footer'
-import Profile from '../components/cv/profile'
+import PhoneHeader from '../../components/phoneresponsive/phone_header'
+import PhoneFooter from '../../components/phoneresponsive/phone_footer'
+import Profile from '../../components/cv/profile'
 
 //Basic
 import { Link } from 'react-router-dom'
-
 
 function CvPhone() {
 

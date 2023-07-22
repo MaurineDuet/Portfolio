@@ -1,6 +1,8 @@
-import { useState } from 'react'
-
+//Style
 import '../../styles/main/collapsible.scss'
+
+//Basic
+import { useState } from 'react'
 
 function Collapsible(props) {
       const [open, setOPen] = useState(false)

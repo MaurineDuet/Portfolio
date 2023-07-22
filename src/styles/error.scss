@@ -1,3 +1,28 @@
+.error_basic_page {
+    background-image: url('../assets/background_universe.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+@media screen and (max-width:767px) {
+
+    .error_basic_page {
+
+        .redirection {
+            width: 90%;
+
+            h3 {
+                width: 98%;
+            }
+        }
+    }
+
+}
+
+
 .redirection,
 .redirection_main_computer {
     display: flex;
@@ -5,7 +30,7 @@
     align-items: center;
     justify-content: stretch;
     background-color: #CDCAC6;
-    
+
     box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
 
 
@@ -59,7 +84,7 @@
 
 .redirection {
     width: 500px;
-    height: 400px;
+    height: auto;
 
     h3 {
         width: 494px;
@@ -68,6 +93,7 @@
     .error_main_content {
         padding: 40px 0;
         gap: 30px;
+        height: auto;
 
         .error_main_title {
 

@@ -1,23 +1,22 @@
 //Style
-import '../styles/responsivephone/phone_main.scss'
-import '../styles/responsivephone/phone_projects.scss'
+import '../../styles/responsivephone/phone_projects.scss'
 
 //Components
-import ErrorPhone from '../components/error_phone_version'
-import PhoneHeader from '../components/phoneresponsive/phone_header'
-import Projects from '../components/main/projects'
-import Project from '../components/main/project'
-import Modal from '../components/main/modal'
-import PhoneFooter from '../components/phoneresponsive/phone_footer'
+import ErrorPhone from '../../components/error/error_phone_version'
+import PhoneHeader from '../../components/phoneresponsive/phone_header'
+import Projects from '../../components/main/projects'
+import Project from '../../components/main/project'
+import Modal from '../../components/main/modal'
+import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 
 //Basic
 import { useState, useEffect } from 'react'
-import { useFetch } from '../hooks/fetch'
+import { useFetch } from '../../hooks/fetch'
 
-function PersoProjects() {
+function FormationProjects() {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [personnelProjects, setPersonnelProjects] = useState([])
+    const [formationProjects, setFormationProjects] = useState([])
 
     const [selectedProjectName, setSelectedProjectName] = useState('')
     const [selectedProjectDescription, setSelectedProjectDescription] = useState('')
@@ -42,8 +41,8 @@ function PersoProjects() {
 
     useEffect(() => {
         if (data) {
-            const personnel = data.filter((project) => project.type === 'personnel')
-            setPersonnelProjects(personnel)
+            const formation = data.filter((project) => project.type === 'formation')
+            setFormationProjects(formation)
         }
     }, [data])
 
@@ -62,10 +61,9 @@ function PersoProjects() {
 
             <PhoneHeader></PhoneHeader>
 
-            <p className='phone_projects_title'>Projets personnels</p>
-
-            <Projects title='Personnels' >
-                {personnelProjects.map((project) =>
+            <p className='phone_projects_title'>Projets de formation</p>
+            <Projects title='Formation' /* height="250px" mainHeight="120px" */>
+                {formationProjects.map((project) =>
                     <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
                 )}
             </Projects>
@@ -75,8 +73,6 @@ function PersoProjects() {
             <PhoneFooter></PhoneFooter>
 
         </div>
-
     )
 }
-
-export default PersoProjects
+export default FormationProjects

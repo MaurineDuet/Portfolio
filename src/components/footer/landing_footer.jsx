@@ -1,24 +1,25 @@
 //Style
-import '../styles/landing.scss'
+import '../../styles/landing.scss'
 
-//Images
+//----- Images
 
 //Computer version
-import PowerIcon from '../assets/power_icon.svg'
-import PowerOn from '../assets/power_on_light.svg'
-import PowerOff from '../assets/power_off_light.svg'
-import DiscBar from '../assets/disc_bar.png'
-import Disquette from '../assets/disquette_icon.svg'
-import Printer from '../assets/printer_icon.svg'
+import PowerIcon from '../../assets/power_icon.svg'
+import PowerOn from '../../assets/power_on_light.svg'
+import PowerOff from '../../assets/power_off_light.svg'
+import DiscBar from '../../assets/disc_bar.png'
+import Disquette from '../../assets/disquette_icon.svg'
+import Printer from '../../assets/printer_icon.svg'
 
 //Phone version
-import PhoneIcon from '../assets/phone_icon_phone_landing.svg'
-import CloudIcon from '../assets/cloud_icon_phone_landing.svg'
-import CentralButton from '../assets/phone_button_landing.svg'
-import PhoneMenuIcon from '../assets/menu_icon_phone_landing.svg'
-import MessageIcon from '../assets/message_icon_phone_landing.svg'
+import PhoneIcon from '../../assets/phone_icon_phone_landing.svg'
+import CloudIcon from '../../assets/cloud_icon_phone_landing.svg'
+import CentralButton from '../../assets/phone_button_landing.svg'
+import PhoneMenuIcon from '../../assets/menu_icon_phone_landing.svg'
+import MessageIcon from '../../assets/message_icon_phone_landing.svg'
 
 function LandingFooter() {
+      
       return (
             <div className='landing_footer'>
 

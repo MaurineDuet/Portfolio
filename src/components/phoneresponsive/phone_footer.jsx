@@ -1,3 +1,4 @@
+//Style
 import '../../styles/responsivephone/phone_footer.scss'
 
 //Basic

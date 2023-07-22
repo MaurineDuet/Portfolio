@@ -1,9 +1,11 @@
+//Style
 import '../../styles/cv/card.scss'
 
 //Images
 import CheckIcon from '../../assets/cv_check_icon.svg'
 
 function Language() {
+    
     return (
         <div className='cv_card_details'>
 

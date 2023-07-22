@@ -1,5 +1,7 @@
 //Style
 import '../../styles/main/note.scss'
+
+//Basic
 import React from 'react'
 
 function Note(props) {

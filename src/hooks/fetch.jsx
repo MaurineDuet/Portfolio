@@ -1,4 +1,4 @@
-
+//Basic
 import { useState, useEffect } from 'react'
 
 /* Mise en place d'une fonction fetch générique */

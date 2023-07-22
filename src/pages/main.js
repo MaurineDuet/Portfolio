@@ -9,10 +9,10 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 //Components
-import ErrorPc from '../components/error_pc_version'
+import ErrorPc from '../components/error/error_pc_version'
 import Projects from '../components/main/projects'
 import Project from '../components/main/project'
-import Footer from '../components/footer'
+import Footer from '../components/footer/footer'
 import Notes from '../components/main/notes'
 import Note from '../components/main/note'
 import Music from '../components/main/music'

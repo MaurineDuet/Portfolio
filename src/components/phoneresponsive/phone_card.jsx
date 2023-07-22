@@ -4,7 +4,6 @@ import React from 'react'
 //Component
 import Project from '../main/project'
 
-
 function PhoneCard({ selectedExperience, onExperienceClick, experiences }) {
 
     const selectedType = selectedExperience ? selectedExperience.type : ''

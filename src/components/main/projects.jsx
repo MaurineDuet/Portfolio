@@ -6,16 +6,8 @@ import React from 'react'
 
 function Projects(props) {
 
-    const { title/* , height, mainHeight */ } = props //Defining needed props
+    const { title } = props //Defining needed props
     const projectCount = React.Children.count(props.children) //Initializing count function for Projects children (in this case, a Project)
-
-/*     const projectsStyle = {
-        height: height || 'auto', // Use the passed height or set it to 'auto' if not provided
-    };
-
-    const projectsMainStyle = {
-        height: mainHeight || 'auto', // Use the passed mainHeight or set it to 'auto' if not provided
-    } */
 
     return (
 

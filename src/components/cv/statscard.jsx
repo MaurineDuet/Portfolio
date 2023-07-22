@@ -9,8 +9,6 @@ import Project from '../main/project'
 import Competences from './statscard_competences'
 import Language from './statscard_langues'
 
-
-
 function StatsCard({ selectedExperience, onExperienceClick }) {
 
     let content

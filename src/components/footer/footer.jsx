@@ -1,21 +1,21 @@
 //Style
-import '../styles/footer.scss'
+import '../../styles/footer.scss'
 
 //Basic
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 //Images
-import Notes from '../assets/notes.svg'
-import Volume from '../assets/volume.svg'
-import Wifi from '../assets/wifi.svg'
-import Battery from '../assets/battery.svg'
+import Notes from '../../assets/notes.svg'
+import Volume from '../../assets/volume.svg'
+import Wifi from '../../assets/wifi.svg'
+import Battery from '../../assets/battery.svg'
 
-import CvIcon from '../assets/menu_cv_icon.svg'
-import LandingIcon from '../assets/menu_landing_icon.svg'
-import HelpIcon from '../assets/menu_help_icon.svg'
-import RocketIcon from '../assets/menu_rocket_icon.svg'
-import MenuLogo from '../assets/menu_logo.png'
+import CvIcon from '../../assets/menu_cv_icon.svg'
+import LandingIcon from '../../assets/menu_landing_icon.svg'
+import HelpIcon from '../../assets/menu_help_icon.svg'
+import RocketIcon from '../../assets/menu_rocket_icon.svg'
+import MenuLogo from '../../assets/menu_logo.png'
 
 function Footer() {
 
