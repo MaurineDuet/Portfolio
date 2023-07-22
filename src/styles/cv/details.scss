@@ -18,10 +18,41 @@
             text-align: center;
             cursor: pointer;
 
-            &:hover, &.selected {
+            &:hover,
+            &.selected {
                 background-color: #C2DCFF;
             }
         }
 
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    .cv_details {
+        width: 100%;
+        padding: 40px 20px 70px 20px;
+
+
+        .cv_buttons {
+            width: 100%;
+            gap: 25px;
+
+            .cv_button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #C2DCFF;
+                gap: 10px;
+                text-decoration: none;
+                color: inherit;
+
+                img {
+                    height: 35px;
+                    width: 35px;
+                }
+
+            }
+        }
     }
 }

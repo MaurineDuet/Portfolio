@@ -112,3 +112,89 @@
 
 
 }
+
+@media screen and (max-width:767px) {
+
+    .cv_profile {
+        z-index: 1;
+        width: 95%;
+        padding: 5px;
+        margin-top: 40px;
+    
+        //Window title
+        h3 {   
+            height: 6vh;
+        }
+    
+        //Nav general settings
+        ul {
+            padding: 10px;
+        }
+    
+        //Nav 1
+        .cv_nav_1 {
+            display: none;
+        }
+    
+        //Nav 2
+        .cv_nav_2 {
+            gap: 30px;
+    
+            li {
+                display: flex;
+                font-size: 0.9em;
+    
+                img {
+                    display: none;
+                }
+            }
+        }
+    
+        .cv_mail {
+            justify-content: space-between;
+            gap: 10px;
+            padding-left: 10px;
+            width: 100%;
+    
+            img {
+                height: 17px;
+                width: 17px;
+            }
+    
+            .cv_mail_bar {
+                padding: 5px;
+                width: 100%;
+            }
+    
+            .cv_mail_send {
+                display: none;
+            }
+    
+        }
+    
+        //Profile pic
+        video {
+            height: 150px;
+        }
+    
+        .cv_title {   
+            gap: 10px;
+            padding: 20px 10px;
+
+    
+            h1 {
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+    
+        }
+    
+    
+    }
+
+
+}
