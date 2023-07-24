@@ -41,13 +41,15 @@ function Main() {
     const [selectedProjectObjectives, setSelectedProjectObjectives] = useState('')
     const [selectedProjectLangages, setSelectedProjectLangages] = useState('')
     const [selectedProjectCreationDate, setSelectedProjectCreationDate] = useState('')
+    const [selectedProjectGitHub, setSelectedProjectGitHub] = useState('')
 
-    const openModal = (name, description, objectives, langages, creationdate) => {
+    const openModal = (name, description, objectives, langages, creationdate, github) => {
         setSelectedProjectName(name)
         setSelectedProjectDescription(description)
         setSelectedProjectObjectives(objectives)
         setSelectedProjectLangages(langages)
         setSelectedProjectCreationDate(creationdate)
+        setSelectedProjectGitHub(github)
         setIsModalOpen(true)
     }
 
@@ -85,13 +87,13 @@ function Main() {
 
                     <Projects title='Personnels'/*  height="350px" mainHeight="220px"  */>
                         {personnelProjects.map((project) =>
-                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate, project.github)} isMainPage={true} />
                         )}
                     </Projects>
 
                     <Projects title='Formation' /* height="250px" mainHeight="120px" */>
                         {formationProjects.map((project) =>
-                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
+                            <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate, project.github)} isMainPage={true} />
                         )}
                     </Projects>
 
@@ -130,7 +132,7 @@ function Main() {
 
             </div>
 
-            {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} creationdate={selectedProjectCreationDate} />}
+            {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} creationdate={selectedProjectCreationDate} github={selectedProjectGitHub} />}
 
             <Footer></Footer>
 

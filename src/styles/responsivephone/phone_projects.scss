@@ -11,7 +11,10 @@
     background-size: cover;
 
 
-    .phone_projects_title {
+    .phone_projects_title,
+    .phone_stats_container,
+    .projects,
+    .modal_overlay {
         display: none;
     }
 
@@ -19,9 +22,6 @@
         display: flex;
     }
 
-    .projects {
-        display: none;
-    }
 }
 
 @media screen and (max-width:767px) {
@@ -51,6 +51,29 @@
 
         .projects {
             display: flex;
+
+            .project {
+                justify-content: center;
+            }
+        }
+
+        .modal_overlay {
+            display: flex;
         }
     }
+
+    .cv_phone_projects {
+
+        .projects {
+            display: flex;
+
+            .project {
+                justify-content: flex-start;
+                padding-top: 25px;
+                gap: 5px;
+            }
+        }
+
+    }
+
 }

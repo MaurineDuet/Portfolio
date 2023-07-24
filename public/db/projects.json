@@ -3,32 +3,32 @@
         "id": 1,
         "name": "The start",
         "type": "personnel",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
+        "description": "site statique simple servant de portfolio et CV",
+        "objectives": "* premier projet de code\n* créer un premier site \n* utiliser les flex-box \n* mettre en place un responsive",
+        "langages": "HTML, CSS",
         "creationdate" : "10/2022",
-        "github": "blabla"
+        "github": ""
     },
 
     {
         "id": 2,
         "name": "Cake Day",
         "type": "personnel",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site de journaling",
+        "objectives": "* premier projet complexe\n* utilisation du JS Vanilla\n* utilisation de la fonction fetch",
+        "langages": "HTML, CSS, JavaScript Vanilla",
+        "creationdate" : "11/2022",
+        "github": ""
     },
 
     {
         "id": 3,
         "name": "Dalkom Cafe",
         "type": "personnel",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
+        "description": "site vitrine pour un café coréen fictif",
+        "objectives": "* exploration en profondeur de CSS\n* utilisation d'animations",
+        "langages": "HTML, CSS, JavaScript Vanilla",
+        "creationdate" : "01/2023",
         "github": "blabla"
     },
 
@@ -36,10 +36,10 @@
         "id": 4,
         "name": "Outfit Me !",
         "type": "personnel",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
+        "description": "site de sélection de vêtements d'après une base de données",
+        "objectives": "* exploration de designs complexes\n* création d'une base de données en json\n* exploration en profondeur de CSS et JS Vanilla",
+        "langages": "HTML, CSS, JavaScript Vanilla, json",
+        "creationdate" : "02/2023",
         "github": "blabla"
     },
 
@@ -48,10 +48,10 @@
         "id": 5,
         "name": "SMTM",
         "type": "personnel",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
+        "description": "site permettant de gérer son budget",
+        "objectives": "* mise en place d'un back-end\n* création de comptes utilisateurs\n* pratique de NodeJS côté server",
+        "langages": "HTML, SCSS (sass), React, NodeJS côté server, MongoDB Atlas",
+        "creationdate" : "04/2023",
         "github": "blabla"
     },
 
@@ -59,11 +59,11 @@
         "id": 6,
         "name": "Portfolio",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "portfolio",
+        "objectives": "* montrer ma créativité en UI design\n* exposer mes différents projets\n *montrer mes compétences de code ",
+        "langages": "HTML, SCSS (sass), React",
+        "creationdate" : "07/2023",
+        "github": "https://github.com/MaurineDuet/Portfolio"
     },
 
 
@@ -71,55 +71,55 @@
         "id": 7,
         "name": "MVG",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site permettant la mise en ligne de livres par les utilisateurs",
+        "objectives": "apprentissage de Node JS côté server",
+        "langages": "React, Node JS côté server, Mongo db Atlas",
+        "creationdate" : "06/2023",
+        "github": "https://github.com/MaurineDuet/OpenclassroomsProject7"
     },
 
     {
         "id": 8,
         "name": "KASA",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site permettant de trouver un logement en ligne via une db json",
+        "objectives": "apprentissage de React",
+        "langages": "HTML, CSS, React, json",
+        "creationdate" : "05/2023",
+        "github": "https://github.com/MaurineDuet/OpenclassroomsProject6"
     },
 
     {
         "id": 9,
         "name": "N.Carducci",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site vitrine d'une photographe fictive",
+        "objectives": "optimiser le site et améliorer le référencement",
+        "langages": "utilisation des outils LightHouse, Wave et Rich Snippet",
+        "creationdate" : "04/2023",
+        "github": "https://github.com/MaurineDuet/OpenclassroomsProject5"
     },
 
     {
         "id": 10,
         "name": "Sophie Bluel",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site pour une architecte d'intérieure fictive",
+        "objectives": "utilisation complexe de JavaScript Vanilla\n* explorer la relation avec le backend",
+        "langages": "HTML, CSS, JavaScript Vanilla",
+        "creationdate" : "02/2023",
+        "github": "https://github.com/MaurineDuet/OpenclassroomsProject3"
     },
 
     {
         "id": 11,
         "name": "Booki",
         "type": "formation",
-        "description": "Bla",
-        "objectives": "bla",
-        "langages": "bla",
-        "creationdate" : "10/2022",
-        "github": "blabla"
+        "description": "site de type comparateur d'hôtels",
+        "objectives": "apprentissage du HTML et CSS",
+        "langages": "HTML, CSS",
+        "creationdate" : "12/2022",
+        "github": "https://github.com/MaurineDuet/OpenclassroomsProject2"
     }
 
 ]

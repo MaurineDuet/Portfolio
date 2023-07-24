@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
-    width: 600px;
+    width: 700px;
     padding: 5px;
     margin-top: 50px;
     position: relative;
@@ -76,8 +76,15 @@
             .cv_card_objectives {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: flex-start;
-                width: 70%;
+                width: 90%;
+                padding: 2px 0px 2px 2px;
+
+                h3 {
+                    background-color: #FFADC7;
+                    color: #474350;
+                }
 
                 img {
                     height: 20px;
@@ -110,6 +117,14 @@
                     border-bottom: 2px solid #474350;
                     color: #474350;
                 }
+
+                ul {
+
+                    li {
+                        height: 25px;
+                    }
+                }
+
             }
 
             //Skills div (work + edu)
@@ -120,9 +135,19 @@
                 ul {
 
                     li {
-                        .check_icon_box {
-                            display: flex;
-                            gap: 5px;
+                        height: 40px;
+                        gap: 20px;
+
+                        progress {
+                            border-radius: 0;
+                            box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
+                            height: 20px;
+                            width: 140px;
+                        }
+
+                        progress::-moz-progress-bar,
+                        progress::-webkit-progress-value {
+                            background-color: #30345A;
                         }
                     }
 
@@ -134,17 +159,18 @@
                 background-color: #FFFFF3;
                 box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
 
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                padding: 20px;
-                gap: 20px;
-
-                .cv_card_tool {
+                ul {
                     display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    flex-basis: 40%;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    .cv_card_tool {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        flex-basis: 40%;
+                    }
+
                 }
 
             }
@@ -158,8 +184,8 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                gap: 10px;
-                width: 70%;
+                gap: 20px;
+                width: 90%;
             }
 
             //Skills div (stats)
@@ -181,12 +207,6 @@
             .cv_card_hobbies,
             .cv_card_objectives {
                 box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
-
-                h3 {
-                    background-color: #FFADC7;
-                    border-bottom: 2px solid #474350;
-                    color: #474350;
-                }
             }
 
             //Hobbies div (stats)

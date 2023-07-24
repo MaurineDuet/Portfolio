@@ -11,7 +11,7 @@ import ProjectImg1 from '../../assets/project_img_1.jpg'
 import ProjectImg2 from '../../assets/project_img_2.jpg'
 import ProjectImg3 from '../../assets/project_img_3.jpg'
 
-function Modal({ closeModal, creationdate, name, description, objectives, langages }) {
+function Modal({ closeModal, creationdate, name, description, objectives, langages, github }) {
 
     return (
         <div className="modal_overlay">
@@ -42,10 +42,10 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
 
                 <div className='modal_main'>
 
-                    <div className='go_to_project'>
+                    <a className='go_to_project' href={github} target="_blank" rel="noreferrer">
                         <img src={GoToProject} alt="Icone aller au projet" />
-                        <p>Accéder au projet</p>
-                    </div>
+                        Accéder au projet
+                    </a>
 
                     <div className='project_details'>
 

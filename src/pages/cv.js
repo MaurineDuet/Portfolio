@@ -12,6 +12,7 @@ import Footer from '../components/footer/footer'
 import Profile from '../components/cv/profile'
 import Card from '../components/cv/card'
 import StatsCard from '../components/cv/statscard'
+import ErrorPc from '../components/error/error_pc_version'
 
 //Basic 
 import { Link } from 'react-router-dom'
@@ -95,6 +96,8 @@ function Cv() {
         <div className='cv_container_overall'>
 
             <img src={StarsBackground} alt="Fond d'écran étoiles" className='stars_background_cv' />
+
+            <ErrorPc></ErrorPc>
 
             <Header></Header>
 

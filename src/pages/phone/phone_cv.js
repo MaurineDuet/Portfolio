@@ -11,6 +11,7 @@ import StatsIcon from '../../assets/skills_icon.svg'
 import PhoneHeader from '../../components/phoneresponsive/phone_header'
 import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 import Profile from '../../components/cv/profile'
+import ErrorPhone from '../../components/error/error_phone_version'
 
 //Basic
 import { Link } from 'react-router-dom'
@@ -19,6 +20,8 @@ function CvPhone() {
 
     return (
         <div className='phone_cv'>
+
+            <ErrorPhone></ErrorPhone>
 
             <PhoneHeader></PhoneHeader>
 

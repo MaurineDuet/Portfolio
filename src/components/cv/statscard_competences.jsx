@@ -2,7 +2,6 @@
 import '../../styles/cv/card.scss'
 
 //Images
-import CheckIcon from '../../assets/cv_check_icon.svg'
 import TravelIcon from '../../assets/cv_travel_icon.svg'
 import SpeakIcon from '../../assets/cv_speak_icon.svg'
 import DrawingIcon from '../../assets/cv_drawing_icon.svg'
@@ -14,37 +13,24 @@ function Competences() {
     return (
         <div className='cv_card_details'>
 
-            <div className='cv_card_title cv_card_global_skills'>
+            <div className='cv_card_title cv_card_skills'>
                 <h3>Compétences</h3>
                 <ul>
                     <li>
-                        <div className='check_icon_box'>
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                        </div>
-                        Bla bla
+                        <progress id="strong_skills" max="100" value="100"></progress>
+                        <label for="strong_skills">créativité, autonomie, organisation, travail méticuleux</label>
                     </li>
                     <li>
-                        <div className='check_icon_box'>
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                        </div>
-                        Bla bla
+                        <progress id="good_skills" max="100" value="75"></progress>
+                        <label for="good_skills">gestion de projet, engagement, travail de groupe</label>
                     </li>
                     <li>
-                        <div className='check_icon_box'>
-                            <img src={CheckIcon} alt="" />
-                            <img src={CheckIcon} alt="" />
-                        </div>
-                        blabla
+                        <progress id="average_skills" max="100" value="50"></progress>
+                        <label for="average_skills">leadership, management</label>
                     </li>
-
                     <li>
-                        <img src={CheckIcon} alt="" />
-                        bla
+                        <progress id="weak_skills" max="100" value="25"></progress>
+                        <label for="weak_skills">relation clients, logistique</label>
                     </li>
                 </ul>
             </div>

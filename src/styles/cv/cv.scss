@@ -5,12 +5,17 @@
     background: linear-gradient(#363543 80%, #454451 85%, #7D7E88 90%, #C2DCFF 100%);
     background-repeat: no-repeat;
     width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    .redirection_main_computer {
+        display: none;
+    }
 
     //Background image
     .stars_background_cv {
@@ -47,11 +52,33 @@
             text-decoration: none;
             color: inherit;
 
-            &:hover, &.selected {
+            &:hover,
+            &.selected {
                 background-color: #C2DCFF;
             }
         }
 
-        
+
     }
+}
+
+@media screen and (max-width:767px) {
+
+    .cv_container_overall {
+        justify-content: center;
+
+        .redirection_main_computer {
+            display: flex;
+            z-index: 2;
+            
+        }
+        .container,
+        header,
+        footer,
+        .stars_background_cv {
+            display: none;
+        }
+
+    }
+
 }

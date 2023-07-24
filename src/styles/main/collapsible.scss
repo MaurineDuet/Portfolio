@@ -33,6 +33,7 @@
     .toggle {
         display: flex;
         justify-content: stretch;
+        align-items: center;
 
         background-color: #FFFFF3;
         color: #474350;
@@ -41,17 +42,17 @@
         margin: 0 5px;
 
         img {
-            height: 100px;
-            width: 100px;
+            height: 50px;
+            width: 50px;
             object-fit: cover;
             border-radius: 10px;
             margin: 20px;
         }
 
         .collapsible_text {
-            line-height: 30px;
             padding: 20px;
             flex-basis: 80%;
+            white-space: pre-wrap;
         }
 
     }
@@ -65,8 +66,13 @@
     .collapsible {
         .toggle {
             img {
-                height: 60px;
-                width: 60px;
+                display: none;
+            }
+
+            .collapsible_text {
+                flex-basis: 100%;
+                line-height: 20px;
+                padding: 15px;
             }
         }
     }

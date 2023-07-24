@@ -92,6 +92,8 @@
                 align-items: center;
                 gap: 15px;
                 height: 90px;
+                text-decoration: none;
+                color: inherit;
 
                 cursor: pointer;
 
@@ -191,6 +193,13 @@
                 height: 60vh;
                 gap: 30px;
                 padding: 30px;
+
+                .go_to_project {
+
+                    img {
+                        height: 50px;
+                    }
+                }
             }
 
             .cv_card {
@@ -213,7 +222,8 @@
                         .cv_card_tools,
                         .cv_card_hobbies,
                         .cv_card_global_skills,
-                        .cv_card_objectives, .cv_card_search {
+                        .cv_card_objectives,
+                        .cv_card_search {
                             width: 90%;
                         }
 
@@ -221,12 +231,13 @@
 
                 }
 
-                //Modal footer
+            }
 
-                .modal_footer {
-                    width: 98%;
-                    margin: 5px;
-                }
+            //Modal footer
+
+            .modal_footer {
+                width: 98%;
+                margin: 5px;
             }
         }
 

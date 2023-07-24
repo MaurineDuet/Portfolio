@@ -69,7 +69,7 @@ function CvEducation() {
     }
 
     return (
-        <div className="phone_projects">
+        <div className="phone_projects cv_phone_projects">
 
             <ErrorPhone></ErrorPhone>
 

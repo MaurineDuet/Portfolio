@@ -1,7 +1,8 @@
 .phone_cv {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
 
     background-image: url('../../assets/background_universe.jpg');
@@ -9,40 +10,69 @@
     background-size: cover;
     overflow-x: scroll;
 
-    .phone_cv_main_content {
+    .redirection {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: scroll;
+    }
 
-        .phone_card_container {
+    .phone_cv_main_content,
+    header,
+    footer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .phone_cv {
+        display: flex;
+        align-items: stretch;
+
+        .redirection {
+            display: none;
+        }
+
+        .header,
+        footer {
+            display: flex;
+        }
+
+        .phone_cv_main_content {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
-            background-color: #FDF0D8;
-            width: 95%;
-            margin-bottom: 50px;
+            align-items: center;
+            overflow-x: scroll;
 
-            h3 {
-                margin: 5px;
-                background-color: #30345A;
-                height: 6vh;
-                color: #FFFFF3;
-
-                display: flex;
-                align-items: center;
-                padding-left: 10px;
-            }
-
-            .phone_card_files {
+            .phone_card_container {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                box-shadow: 3px 3px 0 #FFFFF3, 3px 3px #474350 inset;
-                margin: 5px;
+                gap: 20px;
+                box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+                background-color: #FDF0D8;
+                width: 95%;
+                margin-bottom: 50px;
+
+                h3 {
+                    margin: 5px;
+                    background-color: #30345A;
+                    height: 6vh;
+                    color: #FFFFF3;
+
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                }
+
+                .phone_card_files {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    box-shadow: 3px 3px 0 #FFFFF3, 3px 3px #474350 inset;
+                    margin: 5px;
+                }
             }
         }
+
     }
 
 }
