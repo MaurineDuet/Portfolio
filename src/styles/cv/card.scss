@@ -143,10 +143,19 @@
                             box-shadow: 2px 2px 0 #FFFFF3, 2px 2px #474350 inset;
                             height: 20px;
                             width: 140px;
+
+                            /* Vendor prefixes for Chrome */
+                            &::-webkit-progress-value {
+                                background-color: #30345A;
+                            }
+
+                            &::-webkit-progress-bar {
+                                background-color: #D9D9D9;
+                                width: 140px;
+                            }
                         }
 
-                        progress::-moz-progress-bar,
-                        progress::-webkit-progress-value {
+                        progress::-moz-progress-bar {
                             background-color: #30345A;
                         }
                     }
@@ -260,6 +269,11 @@
 
                             progress {
                                 width: 100px;
+
+
+                            &::-webkit-progress-bar {
+                                width: 100px;
+                            }
                             }
                         }
                     }
