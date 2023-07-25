@@ -19,8 +19,8 @@ function CvStats() {
 
                 <div className='cv_card_main phone_stats'>
 
-                    <Language></Language>
                     <Competences></Competences>
+                    <Language></Language>
 
                 </div>
 

@@ -19,6 +19,8 @@ function CvEducation() {
     const [selectedExperiencePlace, setSelectedExperiencePlace] = useState('')
     const [selectedExperienceCalendar, setSelectedExperienceCalendar] = useState('')
     const [selectedExperienceDescription, setSelectedExperienceDescription] = useState('')
+    const [selectedExperienceReward, setSelectedExperienceReward] = useState('')
+    
 
     const [selectedExperienceStrongskills, setSelectedExperienceStrongskills] = useState('')
     const [selectedExperienceGoodskills, setSelectedExperienceGoodskills] = useState('')
@@ -29,11 +31,12 @@ function CvEducation() {
 
     const [selectedExperienceSearch, setSelectedExperienceSearch] = useState('')
 
-    const openModal = (name, job_place, job_calendar, job_description, strong_skills, good_skills, average_skills, weak_skills, tools, search) => {
+    const openModal = (name, job_place, job_calendar, job_description, reward, strong_skills, good_skills, average_skills, weak_skills, tools, search) => {
         setSelectedExperienceName(name)
         setSelectedExperiencePlace(job_place)
         setSelectedExperienceCalendar(job_calendar)
         setSelectedExperienceDescription(job_description)
+        setSelectedExperienceReward(reward)
 
         setSelectedExperienceStrongskills(strong_skills)
         setSelectedExperienceGoodskills(good_skills)
@@ -88,6 +91,7 @@ function CvEducation() {
                                 experience.job_place,
                                 experience.job_calendar,
                                 experience.job_description,
+                                experience.reward,
                                 experience.good_skills,
                                 experience.strong_skills,
                                 experience.average_skills,
@@ -108,6 +112,7 @@ function CvEducation() {
                     job_place={selectedExperiencePlace}
                     job_calendar={selectedExperienceCalendar}
                     job_description={selectedExperienceDescription}
+                    reward={selectedExperienceReward}
                     good_skills={selectedExperienceGoodskills}
                     strong_skills={selectedExperienceStrongskills}
                     average_skills={selectedExperienceAverageskills}

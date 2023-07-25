@@ -225,6 +225,29 @@
                         .cv_card_objectives,
                         .cv_card_search {
                             width: 90%;
+
+                            ul {
+                                padding: 20px 15px;
+                            }
+                        }
+
+                        .cv_card_skills {
+
+                            ul {
+                                li {
+                                    progress {
+                                        width: 100px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .cv_card_tools {
+                            ul {
+                                li {
+                                    height: 30px;
+                                }
+                            }
                         }
 
                     }

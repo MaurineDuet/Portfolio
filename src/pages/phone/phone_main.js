@@ -49,7 +49,7 @@ function MainPhone() {
 
                     <img src={SwitchGirl} alt="Icone de personnage" className='girl_pic' />
 
-                    <Link to="/cvphone" className='phone_app'>
+                    <Link to="" className='phone_app'>
                         <img src={NotesIcon} alt="Icone de personnage" />
                         Mes notes
                     </Link>
