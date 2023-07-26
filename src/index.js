@@ -21,7 +21,7 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/Portfolio">
+    <HashRouter basename='/'>
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         
@@ -38,6 +38,6 @@ root.render(
 
         <Route path="*" element={<Error />}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
