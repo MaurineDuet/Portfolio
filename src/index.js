@@ -21,7 +21,7 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter base="/">
+    <BrowserRouter base="/Portfolio">
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         
