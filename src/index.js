@@ -23,7 +23,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />}></Route>
+        <Route path="/{app-name}" element={<Landing />}></Route>
         
         <Route path="/main" element={<Main />}></Route>
         <Route path="/mainphone" element={<MainPhone />}></Route>
