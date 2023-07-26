@@ -21,11 +21,11 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter base="/">
+    <BrowserRouter base="/">
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         
-        <Route path="/#/main" element={<Main />}></Route>
+        <Route path="/main" element={<Main />}></Route>
         <Route path="/mainphone" element={<MainPhone />}></Route>
         <Route path="/formationprojects" element={<FormationProjects />}></Route>
         <Route path="/persoprojects" element={<PersoProjects />}></Route>
@@ -38,6 +38,6 @@ root.render(
 
         <Route path="*" element={<Error />}></Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
