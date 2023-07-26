@@ -25,8 +25,8 @@ root.render(
       <Routes>
         <Route path="/Portfolio" element={<Landing />}></Route>
         
-        <Route path="/Portfolio/main" element={<Main />}></Route>
-        <Route path="/Portfolio/mainphone" element={<MainPhone />}></Route>
+        <Route path="/main" element={<Main />}></Route>
+        <Route path="/mainphone" element={<MainPhone />}></Route>
         <Route path="/formationprojects" element={<FormationProjects />}></Route>
         <Route path="/persoprojects" element={<PersoProjects />}></Route>
 
