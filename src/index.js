@@ -21,12 +21,12 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />}></Route>
+        <Route path="/Portfolio" element={<Landing />}></Route>
         
-        <Route path="/main" element={<Main />}></Route>
-        <Route path="/mainphone" element={<MainPhone />}></Route>
+        <Route path="/Portfolio/main" element={<Main />}></Route>
+        <Route path="/Portfolio/mainphone" element={<MainPhone />}></Route>
         <Route path="/formationprojects" element={<FormationProjects />}></Route>
         <Route path="/persoprojects" element={<PersoProjects />}></Route>
 
