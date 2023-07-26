@@ -1,7 +1,7 @@
 //Imports basiques React
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter, BrowserRouter} from 'react-router-dom'
 
 //Imports des pages
 import Landing from './pages/landing'
@@ -21,7 +21,8 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
+
       <Routes>
         <Route path="/" element={<Landing />}></Route>
         
@@ -38,6 +39,7 @@ root.render(
 
         <Route path="*" element={<Error />}></Route>
       </Routes>
-    </Router>
+    </HashRouter>
+    
   </React.StrictMode>
 );
