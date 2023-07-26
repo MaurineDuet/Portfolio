@@ -27,7 +27,7 @@ function Cv() {
     const [educationExperience, setEducationExperience] = useState([])
     const [selectedExperience, setSelectedExperience] = useState(null)
     const [selectedButton, setSelectedButton] = useState('work')
-    const { data, error } = useFetch('/db/experiences.json')
+    const { data, error } = useFetch('/Portfolio/db/experiences.json')
 
     useEffect(() => {
         if (data) {

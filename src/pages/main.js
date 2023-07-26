@@ -57,7 +57,7 @@ function Main() {
         setIsModalOpen(false)
     }
 
-    const { data, error } = useFetch('/db/projects.json')
+    const { data, error } = useFetch('/Portfolio/db/projects.json')
 
     useEffect(() => {
         if (data) {
