@@ -21,9 +21,9 @@ import Error from './pages/error'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route exact path="/{app-name}" element={<Landing />}></Route>
+        <Route path="/" element={<Landing />}></Route>
         
         <Route path="/main" element={<Main />}></Route>
         <Route path="/mainphone" element={<MainPhone />}></Route>
