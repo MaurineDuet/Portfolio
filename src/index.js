@@ -1,7 +1,7 @@
 //Imports basiques React
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Routes, Route, HashRouter, BrowserRouter} from 'react-router-dom'
+import { Routes, Route, BrowserRouter} from 'react-router-dom'
 
 //Imports des pages
 import Landing from './pages/landing'
@@ -11,6 +11,7 @@ import PersoProjects from './pages/phone/phone_perso_projects'
 import Cv from './pages/cv'
 
 import MainPhone from './pages/phone/phone_main'
+import NotesPhone from './pages/phone/phone_notes'
 import CvPhone from './pages/phone/phone_cv'
 import CvWork from './pages/phone/phone_work_xp'
 import CvEducation from './pages/phone/phone_education_xp'
@@ -28,6 +29,7 @@ root.render(
         
         <Route path="/main" element={<Main />}></Route>
         <Route path="/mainphone" element={<MainPhone />}></Route>
+        <Route path="/phonenotes" element={<NotesPhone />}></Route>
         <Route path="/formationprojects" element={<FormationProjects />}></Route>
         <Route path="/persoprojects" element={<PersoProjects />}></Route>
 

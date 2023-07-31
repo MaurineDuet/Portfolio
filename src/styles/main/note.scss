@@ -74,3 +74,35 @@
     }
 
 }
+
+@media screen and (max-width:767px) {
+
+    .note {
+        height: 250px;
+        width: 250px;
+        padding-top: 2px;
+
+        .note_title {
+            height: 30px;
+            width: 246px;
+
+            padding-right: 10px;
+
+        }
+
+        img {
+            height: 70px;
+            width: 246px;
+            margin-top: 2px;
+        }
+
+        .note_text {
+            height: 150px;
+            line-height: 10px;
+            font-size: 1em;
+            line-height: 20px;
+            padding-top: 20px;
+        }
+    }
+
+}

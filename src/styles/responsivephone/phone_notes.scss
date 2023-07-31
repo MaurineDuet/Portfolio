@@ -1,0 +1,20 @@
+.phone_projects {
+
+    .phone_notes_container {
+
+        width: 100%;
+        min-height: 71vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: scroll;
+        row-gap: 30px;
+
+        padding-top: 20px;
+        padding-bottom: 100px;
+
+    }
+
+}
