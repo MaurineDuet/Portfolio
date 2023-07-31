@@ -1,19 +1,44 @@
 .phone_projects {
 
     .phone_notes_container {
+        display: none;
+    }
+}
 
-        width: 100%;
-        min-height: 71vh;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow-x: scroll;
-        row-gap: 30px;
+@media screen and (max-width:767px) {
 
-        padding-top: 20px;
-        padding-bottom: 100px;
+    .phone_projects {
+
+        .phone_notes_container {
+
+            position: relative;
+
+            width: 100%;
+            min-height: 71vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: scroll;
+            row-gap: 30px;
+
+            padding-top: 40px;
+
+            .note_2 {
+                position: relative;
+                top: -70px;
+                left: -50px;
+            }
+
+            .note_3 {
+                position: relative;
+                top: -120px;
+                right: -30px;
+            }
+
+        }
 
     }
 

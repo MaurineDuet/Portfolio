@@ -89,10 +89,10 @@ function Footer() {
                         <img src={RocketIcon} alt="" />
                         <p>mon univers</p>
                     </Link>
-                    <div className='menu_button'>
+                    <a className='menu_button' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='blank'>
                         <img src={HelpIcon} alt="" />
                         <p>help</p>
-                    </div>
+                    </a>
                 </div>
             </div>
 
