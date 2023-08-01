@@ -109,6 +109,8 @@ function Cv() {
 
                     <div className='cv_details'>
 
+                        <h3 className='cv_buttons_title'>Cliquez sur les boutons ci-dessous pour parcourir les pages de mon CV</h3>
+
                         <ul className='cv_buttons'>
                             <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
                             <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>

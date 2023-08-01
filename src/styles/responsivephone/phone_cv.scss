@@ -27,6 +27,7 @@
     .phone_cv {
         display: flex;
         align-items: stretch;
+        justify-content: flex-start;
 
         .redirection {
             display: none;
@@ -43,6 +44,7 @@
             align-items: center;
             justify-content: flex-start;
             overflow-x: scroll;
+            min-height: 80vh;
 
             .phone_card_container {
                 display: flex;

@@ -3,6 +3,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 40px;
+    background-color: #CDCAC6;
+    box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
+    padding: 5px;
+
+    .cv_buttons_title {
+        background-color: #30345A;
+/*         box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset; */
+        padding: 15px 0px;
+        width: 100%;
+        color: #FFFFF3;
+        text-align: center;
+        margin: 0 px;
+    }
 
     //Nav and buttons
     .cv_buttons {
@@ -33,9 +47,17 @@
         width: 100%;
         padding: 40px 20px 70px 20px;
 
+        background-color: transparent;
+        box-shadow: none;
+        gap: 0;
+
+        .cv_buttons_title {
+            display: none;
+        }
+
 
         .cv_buttons {
-            width: 100%;
+            width: 95%;
             gap: 25px;
 
             .cv_button {

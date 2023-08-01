@@ -20,6 +20,7 @@ import Modal from '../components/main/modal'
 
 //Hook
 import { useFetch } from '../hooks/fetch'
+import { useFetchMusic } from '../hooks/fetch_music'
 
 //Images
 import Trash from '../assets/trash.svg'
@@ -31,6 +32,8 @@ import Note2 from '../assets/note_2_img.jpg'
 import Note3 from '../assets/note_3_img.jpg'
 
 function Main() {
+
+    //Modal des projets 
 
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [personnelProjects, setPersonnelProjects] = useState([])
@@ -68,6 +71,21 @@ function Main() {
         }
     }, [data])
 
+    //Musique
+
+    const { songs, songsError } = useFetchMusic('db/music.json');
+    console.log(songs)
+
+    // Gestion des erreurs pour la musique et pour les données des projets
+
+    if (!songs) {
+      return <span>Loading...</span>; // Display a loading message or spinner
+    }
+  
+    if (songsError) {
+      return <span>Error fetching songs data.</span>; // Display an error message
+    }
+
     if (!data) {
         return <span>Chargement en cours...</span>
     }
@@ -75,6 +93,7 @@ function Main() {
     if (error) {
         return <span>Il y a un problème</span>
     }
+
 
     return (
         <div className="main_overall_container">
@@ -127,7 +146,7 @@ function Main() {
                         <Note text='Seulement un mois avant le départ en Corée <3' img={Note3} className='note_3'></Note>
                     </Notes>
 
-                    <Music></Music>
+                    <Music songs={songs} ></Music>
                 </section>
 
             </div>
