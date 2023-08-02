@@ -116,7 +116,7 @@
                 background: #d9d9d9;
                 border: solid 1px #474350;
                 cursor: pointer;
-                margin-top: -14px;
+                margin-top: -15px;
                 /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
                 box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
                 /* Add cool effects to your sliders! */
@@ -145,8 +145,8 @@
             input[type=range]::-ms-thumb {
                 box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
                 border: solid 1px #474350;
-                height: 20px;
-                width: 10px;
+                height: 30px;
+                width: 15px;
                 border-radius: 0px;
                 background: #d9d9d9;
                 cursor: pointer;
@@ -264,6 +264,7 @@
             .volume_control {
 
                 input[type=range]::-webkit-slider-thumb {
+                    margin-top: -10px;
                     height: 20px;
                     width: 10px;
                 }
