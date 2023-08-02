@@ -53,6 +53,28 @@ function Music({ songs }) {
         }
     }, [isPlaying])
 
+    useEffect(() => {
+        // Handle the onEnded event to play the next song automatically
+        const handleAudioEnded = () => {
+            setTimeout(() => {
+                setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length); // Use modulo to loop back to the first song if at the end
+                setIsPlaying(true); // Start playing the new song
+            }, 100);
+        };
+
+        // Attach the event listener for the onEnded event
+        if (audioElementRef.current) {
+            audioElementRef.current.addEventListener('ended', handleAudioEnded);
+        }
+
+        // Clean up the event listener on component unmount
+        return () => {
+            if (audioElementRef.current) {
+                audioElementRef.current.removeEventListener('ended', handleAudioEnded);
+            }
+        };
+    }, [currentSongIndex, songs])
+
     const playPauseHandler = () => {
         const audioElement = audioElementRef.current;
         if (!audioElement) return;
