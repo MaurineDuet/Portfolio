@@ -1,0 +1,72 @@
+[
+    {
+        "title": "ASAP",
+        "artist": "NewJeans",
+        "url": "db/music/NewJeans_ASAP.mp3"
+    },
+    {
+        "title": "ACNH Main Theme",
+        "artist": "Lia Remix",
+        "url": "db/music/ACNH_Main_Theme_Lia_Remix.mp3"
+    },
+    {
+        "title": "Attention",
+        "artist": "NewJeans",
+        "url": "db/music/NewJeans_Attention.mp3"
+    },
+    {
+        "title": "Alone",
+        "artist": "Nawhij",
+        "url": "db/music/nawhij_alone.mp3"
+    },
+    {
+        "title": "New Jeans",
+        "artist": "NewJeans",
+        "url": "db/music/NewJeans_NewJeans.mp3"
+    },
+    {
+        "title": "7 AM",
+        "artist": "ACNH Lofi Remix",
+        "url": "db/music/7_AM_ACNH.mp3"
+    },
+    {
+        "title": "Super Shy",
+        "artist": "NewJeans",
+        "url": "db/music/NewJeans_Super_Shy.mp3"
+    },
+    {
+        "title": "Cloud Nine",
+        "artist": "Nawhij",
+        "url": "db/music/nawhij_cloud_nine.mp3"
+    },
+    {
+        "title": "6 AM",
+        "artist": "ACNH King & Divine Remix",
+        "url": "db/music/6am_ACNH_King_Divine.mp3"
+    },
+    {
+        "title": "7 AM This Morining",
+        "artist": "Softy",
+        "url": "db/music/softy_7am_This_Morning.mp3"
+    },
+    {
+        "title": "OMG",
+        "artist": "New Jeans",
+        "url": "db/music/NewJeans_OMG.mp3"
+    },
+    {
+        "title": "Won't See You",
+        "artist": "Nawhij",
+        "url": "db/music/nawhij_wont_see_you.mp3"
+    },
+    {
+        "title": "Soulitune",
+        "artist": "Reverie",
+        "url": "db/music/Soulitune_Reverie.mp3"
+    },
+    {
+        "title": "Hydrangea",
+        "artist": "Nawhij",
+        "url": "db/music/nawhij_hydrangea.mp3"
+    }
+]
