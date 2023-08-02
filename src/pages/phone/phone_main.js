@@ -22,7 +22,7 @@ function MainPhone() {
 
     //Musique
 
-    const { songs, songsError } = useFetchMusic('db/music.json');
+    const { songs, songsError } = useFetchMusic('/Portfolio/db/music.json');
     console.log(songs)
 
     // Gestion des erreurs pour la musique et pour les données des projets
