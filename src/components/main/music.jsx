@@ -6,6 +6,8 @@ import Pause from '../../assets/pause_icon.svg'
 import Play from '../../assets/play_icon.svg'
 import Next from '../../assets/next_icon.svg'
 import Previous from '../../assets/previous_icon.svg'
+import SoundOn from '../../assets/sound_on_icon.svg'
+import SoundOff from '../../assets/sound_off_icon.svg'
 
 //Basic
 import { useState, useEffect, useRef } from 'react'
@@ -102,6 +104,20 @@ function Music({ songs }) {
             audioElementRef.current.volume = newVolume;
         }
         setVolume(newVolume);
+    }
+
+    const setVolumeToZero = () => {
+        if (audioElementRef.current) {
+            audioElementRef.current.volume = 0;
+        }
+        setVolume(0);
+    };
+    
+    const setVolumeToOne = () => {
+        if (audioElementRef.current) {
+            audioElementRef.current.volume = 1;
+        }
+        setVolume(1);
     };
 
     return (
@@ -120,12 +136,13 @@ function Music({ songs }) {
                     <button onClick={skipNextHandler}>
                         <img src={Next} alt="Icone pause" />
                     </button>
-
                 </div>
 
                 <p>{songs[currentSongIndex].title} - {songs[currentSongIndex].artist}</p>
 
                 <div className="volume_control">
+
+                    <img src={SoundOff} alt="" onClick={setVolumeToZero}/>
                     <input
                         type="range"
                         min="0"
@@ -134,6 +151,8 @@ function Music({ songs }) {
                         value={volume}
                         onChange={volumeChangeHandler}
                     />
+                    <img src={SoundOn} alt="" onClick={setVolumeToOne} />
+                    
                 </div>
 
             </div>

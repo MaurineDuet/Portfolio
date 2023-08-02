@@ -46,13 +46,13 @@
 
             .phone_main_content {
                 display: flex;
-                padding: 50px 30px;
+                padding: 30px;
                 justify-content: center;
                 align-items: stretch;
                 overflow-x: scroll;
                 gap: 30px;
                 flex-wrap: wrap;
-                height: 75vh;
+                height: 70vh;
 
                 .phone_app {
                     background: linear-gradient(#FFD0D0, #FDF0D8);
