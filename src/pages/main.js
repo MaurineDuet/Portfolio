@@ -5,7 +5,7 @@ import '../styles/main/notes.scss'
 import '../styles/error.scss'
 
 //Basic
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 //Components
@@ -73,8 +73,12 @@ function Main() {
 
     //Musique
 
+    //Fetch les musiques
     const { songs, songsError } = useFetchMusic('/Portfolio/db/music.json');
-    console.log(songs)
+
+    //Règle le volume de base
+    const [volume, setVolume] = useState(0.5)
+    const audioElementRef = useRef(null)
 
     // Gestion des erreurs pour la musique et pour les données des projets
 
@@ -146,14 +150,14 @@ function Main() {
                         <Note text='Seulement un mois avant le départ en Corée <3' img={Note3} className='note_3'></Note>
                     </Notes>
 
-                    <Music songs={songs} ></Music>
+                    <Music songs={songs} audioElementRef={audioElementRef}></Music>
                 </section>
 
             </div>
 
             {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} creationdate={selectedProjectCreationDate} github={selectedProjectGitHub} />}
-
-            <Footer></Footer>
+            
+            <Footer audioElementRef={audioElementRef} volume={volume} setVolume={setVolume}></Footer>
 
         </div >
     )

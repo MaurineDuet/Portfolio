@@ -66,11 +66,12 @@ button {
     text-transform: uppercase;
 }
 
-//------------- RESOLUTION : 1000px to 1399px screens (small laptops)
+//------------- RESOLUTION : 1200px to 1399px screens (small laptops)
 
 @media screen and (max-width:1399px) {
     .container {
-        width: 1000px;
+        width: 1200px;
+        justify-content: space-around;
     }
 
     h2 {
@@ -81,6 +82,16 @@ button {
         padding: 3px 20px;
     }
 }
+
+//------------- RESOLUTION : 1000px to 1199px screens (small laptops)
+
+@media screen and (max-width:1199px) {
+    .container {
+        width: 1000px;
+        justify-content: space-around;
+    }
+}
+
 
 //------------- RESOLUTION : 999px to 768px screens (tablets)
 

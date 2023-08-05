@@ -89,6 +89,10 @@ footer {
                 background-color: #D9D9D9;
             }
 
+            .volume_button {
+                cursor: pointer;
+            }
+
             //Hour button
 
             .hour {
@@ -103,7 +107,179 @@ footer {
             }
         }
     }
+
+    //Volume modal 
+
+    .volume_modal {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 150px;
+        bottom: 5vh;
+        height: 60px;
+
+        background-color: #CDCAC6;
+        box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+
+        .volume_control {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 40px;
+            gap: 10px;
+
+            img {
+                height: 30px;
+                cursor: pointer;
+            }
+
+            input[type=range] {
+                -webkit-appearance: none;
+                /* Hides the slider so that custom slider can be made */
+                width: 100%;
+                /* Specific width is required for Firefox. */
+                background: transparent;
+                /* Otherwise white in Chrome */
+            }
+
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+            }
+
+            input[type=range]:focus {
+                outline: none;
+                /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+            }
+
+            input[type=range]::-ms-track {
+                width: 100%;
+                cursor: pointer;
+
+                /* Hides the slider so custom styles can be added */
+                background: transparent;
+                border-color: transparent;
+                color: transparent;
+            }
+
+            //------- Styling the thumb
+
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                height: 30px;
+                width: 15px;
+                border-radius: 0px;
+                background: #d9d9d9;
+                border: solid 1px #474350;
+                cursor: pointer;
+                margin-top: -15px;
+                /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+                /* Add cool effects to your sliders! */
+
+                &:hover {
+                    background: #CDCAC6;
+                }
+            }
+
+            /* All the same stuff for Firefox */
+            input[type=range]::-moz-range-thumb {
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+                border: solid 1px #474350;
+                height: 30px;
+                width: 15px;
+                border-radius: 0px;
+                background: #d9d9d9;
+                cursor: pointer;
+
+                &:hover {
+                    background: #CDCAC6;
+                }
+            }
+
+            /* All the same stuff for IE */
+            input[type=range]::-ms-thumb {
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+                border: solid 1px #474350;
+                height: 30px;
+                width: 15px;
+                border-radius: 0px;
+                background: #d9d9d9;
+                cursor: pointer;
+
+                &:hover {
+                    background: #CDCAC6;
+                }
+            }
+
+            //Bar
+
+            //Chrome
+
+            input[type=range]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 3px;
+                box-shadow: 2px 2px 0 #FFFFF3;
+                background: #474350;
+                border-radius: 0px;
+                border: none;
+            }
+
+            input[type=range]:focus::-webkit-slider-runnable-track {
+                background: #474350;
+            }
+
+            //Firefox
+
+            input[type=range]::-moz-range-track {
+                width: 100%;
+                height: 3px;
+                box-shadow: 2px 2px 0 #FFFFF3;
+                background: #474350;
+                border-radius: 0px;
+                border: none;
+            }
+
+            //IE
+
+            input[type=range]::-ms-track {
+                width: 100%;
+                height: 3px;
+                cursor: pointer;
+                background: transparent;
+                border-color: transparent;
+                border-width: 16px 0;
+                color: transparent;
+            }
+
+            input[type=range]::-ms-fill-lower {
+                background: #474350;
+                border: none;
+                border-radius: 0px;
+                box-shadow: 2px 2px 0 #FFFFF3;
+            }
+
+            input[type=range]:focus::-ms-fill-lower {
+                background: #3071a9;
+            }
+
+            input[type=range]::-ms-fill-upper {
+                background: #474350;
+                border: none;
+                border-radius: 0px;
+                box-shadow: 2px 2px 0 #FFFFF3;
+            }
+
+            input[type=range]:focus::-ms-fill-upper {
+                background: #474350;
+            }
+
+        }
+    }
+
 }
+
 
 
 //-------- RESOLUTION : 1000px to 1399px (small laptops) && 999px to 768px (tablets)

@@ -6,17 +6,20 @@ import Pause from '../../assets/pause_icon.svg'
 import Play from '../../assets/play_icon.svg'
 import Next from '../../assets/next_icon.svg'
 import Previous from '../../assets/previous_icon.svg'
-import SoundOn from '../../assets/sound_on_icon.svg'
-import SoundOff from '../../assets/sound_off_icon.svg'
+/* import SoundOn from '../../assets/sound_on_icon.svg'
+import SoundOff from '../../assets/sound_off_icon.svg' */
 
 //Basic
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 
-function Music({ songs }) {
+function Music({ songs, audioElementRef }) {
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioElementRef = useRef(null)
+    const [currentTime, setCurrentTime] = useState(0);
+    const [audioReady, setAudioReady] = useState(false)
+
+    //Audio element creation
 
     useEffect(() => {
         // Create or update the audio element on component mount or song change
@@ -37,7 +40,29 @@ function Music({ songs }) {
                 audioElementRef.current.load();
             }
         };
-    }, [currentSongIndex, songs]);
+    }, [currentSongIndex, songs, audioElementRef]);
+
+    // Update the audioReady state when the audio element is loaded
+    useEffect(() => {
+        const audioElement = audioElementRef.current;
+      
+        const handleLoadedMetadata = () => {
+          setAudioReady(true);
+        };
+      
+        if (audioElement) {
+          audioElement.addEventListener('loadedmetadata', handleLoadedMetadata);
+      
+          // Handle the case when audio is not ready
+          setAudioReady(audioElement.readyState === 4);
+      
+          return () => {
+            audioElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
+          };
+        }
+      }, [audioElementRef]);
+      
+    //Play and pause mecanism
 
     useEffect(() => {
         // Update the play/pause status whenever the isPlaying state changes
@@ -51,15 +76,57 @@ function Music({ songs }) {
                 audioElementRef.current.pause();
             }
         }
-    }, [isPlaying])
+    }, [isPlaying, audioElementRef]);
+
+    //Changing the song's timing
+
+    useEffect(() => {
+        // Rest of the code remains the same
+
+        // Attach the event listener for the timeupdate event to update the currentTime
+        const handleTimeUpdate = () => {
+            if (audioElementRef.current) {
+                setCurrentTime(audioElementRef.current.currentTime);
+            }
+        };
+
+        if (audioElementRef.current) {
+            audioElementRef.current.addEventListener('timeupdate', handleTimeUpdate);
+        }
+
+        return () => {
+            if (audioElementRef.current) {
+                audioElementRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+            }
+        };
+    }, [audioElementRef])
+
+    //Triggering the time changing with parseFloat
+
+    const onSeekBarChange = (event) => {
+        const seekTime = parseFloat(event.target.value);
+        if (audioElementRef.current) {
+            audioElementRef.current.currentTime = seekTime;
+        }
+        setCurrentTime(seekTime);
+    }
+
+    //Formating time
+
+    function formatTime(timeInSeconds) {
+        const minutes = Math.floor(timeInSeconds / 60);
+        const seconds = Math.floor(timeInSeconds % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    }
+
+
+    //Attempt to play songs automatically without user action
 
     useEffect(() => {
         // Handle the onEnded event to play the next song automatically
         const handleAudioEnded = () => {
-            setTimeout(() => {
-                setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length); // Use modulo to loop back to the first song if at the end
-                setIsPlaying(true); // Start playing the new song
-            }, 100);
+            setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length); // Use modulo to loop back to the first song if at the end
+            /*          playPauseHandler() */
         };
 
         // Attach the event listener for the onEnded event
@@ -73,7 +140,9 @@ function Music({ songs }) {
                 audioElementRef.current.removeEventListener('ended', handleAudioEnded);
             }
         };
-    }, [currentSongIndex, songs])
+    }, [currentSongIndex, songs, audioElementRef]);
+
+    //Button play/pause
 
     const playPauseHandler = () => {
         const audioElement = audioElementRef.current;
@@ -90,6 +159,8 @@ function Music({ songs }) {
         setIsPlaying(!isPlaying);
     };
 
+    //Button next
+
     const skipNextHandler = () => {
         if (audioElementRef.current) {
             const audioElement = audioElementRef.current;
@@ -102,6 +173,8 @@ function Music({ songs }) {
             setIsPlaying(true); // Start playing the new song
         }, 100);
     };
+
+    //Button pause
 
     const skipPrevHandler = () => {
         if (audioElementRef.current) {
@@ -117,30 +190,6 @@ function Music({ songs }) {
             setIsPlaying(true); // Start playing the new song
         }, 100)
     }
-
-    const [volume, setVolume] = useState(0.5); // Default volume is set to 0.5 (50%)
-
-    const volumeChangeHandler = (event) => {
-        const newVolume = parseFloat(event.target.value);
-        if (audioElementRef.current) {
-            audioElementRef.current.volume = newVolume;
-        }
-        setVolume(newVolume);
-    }
-
-    const setVolumeToZero = () => {
-        if (audioElementRef.current) {
-            audioElementRef.current.volume = 0;
-        }
-        setVolume(0);
-    };
-    
-    const setVolumeToOne = () => {
-        if (audioElementRef.current) {
-            audioElementRef.current.volume = 1;
-        }
-        setVolume(1);
-    };
 
     return (
         <div className='music'>
@@ -162,24 +211,20 @@ function Music({ songs }) {
 
                 <p>{songs[currentSongIndex].title} - {songs[currentSongIndex].artist}</p>
 
-                <div className="volume_control">
-
-                    <img src={SoundOff} alt="" onClick={setVolumeToZero}/>
+                <div className='seek_bar'>
+                    <p>{formatTime(currentTime)}</p>
                     <input
-                        type="range"
-                        min="0"
-                        max="1"
-                        step="0.01"
-                        value={volume}
-                        onChange={volumeChangeHandler}
+                        type='range'
+                        min='0'
+                        max={audioReady ? audioElementRef.current.duration : 0}
+                        step='0.01'
+                        value={currentTime}
+                        onChange={onSeekBarChange}
                     />
-                    <img src={SoundOn} alt="" onClick={setVolumeToOne} />
-                    
+                    <p>{audioReady ? formatTime(audioElementRef.current.duration) : 'OO:OO'}</p>
                 </div>
 
             </div>
-
-
 
         </div>
     )
