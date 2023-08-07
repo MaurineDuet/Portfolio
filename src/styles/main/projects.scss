@@ -84,7 +84,7 @@
 
 
 
-//--------- RESOLUTION : 1000px to 1399px (small laptops)
+//--------- RESOLUTION : 1200px to 1399px (small laptops)
 
 @media screen and (max-width:1399px) {
 
@@ -92,8 +92,24 @@
 
 
     .projects {
+        height: 290px;
+
+        .projects_main {
+            height: 160px;
+        }
+    }
+
+}
+
+//--------- RESOLUTION : 1000px to 1199px (small laptops)
+
+@media screen and (max-width:1199px) {
+
+    //Basic settings
+
+
+    .projects {
         width: 400px;
-        height: 260px;
 
         //Top frame with title and tool bar
 
@@ -108,7 +124,6 @@
 
         .projects_main {
             width: 390px;
-            height: 130px;
             row-gap: 20px;
 
             padding: 20px;
@@ -125,8 +140,7 @@
 
 
 
-
-//-------- RESOLUTION : 999px to 768px (tablets)
+//-------- RESOLUTION : 900px to 999px (tablets)
 
 @media screen and (max-width:999px) {
 
@@ -134,7 +148,7 @@
 
 
     .projects {
-        width: 300px;
+        width: 420px;
         height: 260px;
 
         //Top frame with title and tool bar
@@ -142,7 +156,7 @@
         .projects_title {
 
             h3 {
-                width: 290px;
+                width: 410px;
                 height: 30px;
             }
         }
@@ -150,15 +164,85 @@
         //Main frame with projects icons
 
         .projects_main {
-            width: 290px;
+            width: 410px;
             height: 150px;
         }
 
         //Bottom of the frame with number of projects
 
         .projects_footer {
-            width: 290px;
+            width: 410px;
             height: 30px;
+        }
+    }
+
+}
+
+
+//-------- RESOLUTION : 800px to 899px (tablets)
+
+@media screen and (max-width:899px) {
+
+    //Basic settings
+
+
+    .projects {
+        width: 370px;
+
+        //Top frame with title and tool bar
+
+        .projects_title {
+
+            h3 {
+                width: 360px;
+            }
+        }
+
+        //Main frame with projects icons
+
+        .projects_main {
+            width: 360px;
+        }
+
+        //Bottom of the frame with number of projects
+
+        .projects_footer {
+            width: 360px;
+        }
+    }
+
+}
+
+
+//-------- RESOLUTION : 768px to 799px (tablets)
+
+@media screen and (max-width:799px) {
+
+    //Basic settings
+
+
+    .projects {
+        width: 330px;
+
+        //Top frame with title and tool bar
+
+        .projects_title {
+
+            h3 {
+                width: 320px;
+            }
+        }
+
+        //Main frame with projects icons
+
+        .projects_main {
+            width: 320px;
+        }
+
+        //Bottom of the frame with number of projects
+
+        .projects_footer {
+            width: 320px;
         }
     }
 

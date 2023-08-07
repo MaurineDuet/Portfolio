@@ -66,11 +66,11 @@ button {
     text-transform: uppercase;
 }
 
-//------------- RESOLUTION : 1200px to 1399px screens (small laptops)
+//------------- RESOLUTION : 1000px to 1399px screens (small laptops)
 
 @media screen and (max-width:1399px) {
     .container {
-        width: 1200px;
+        width: 90%;
         justify-content: space-around;
     }
 
@@ -83,21 +83,13 @@ button {
     }
 }
 
-//------------- RESOLUTION : 1000px to 1199px screens (small laptops)
 
-@media screen and (max-width:1199px) {
-    .container {
-        width: 1000px;
-        justify-content: space-around;
-    }
-}
-
-
-//------------- RESOLUTION : 999px to 768px screens (tablets)
+//------------- RESOLUTION : 900px to 999px screens (tablets)
 
 @media screen and (max-width:999px) {
     .container {
-        width: 750px;
+        width: 900px;
+        justify-content: center;
     }
 
     h2 {
@@ -106,6 +98,22 @@ button {
 
     button {
         padding: 3px 20px;
+    }
+}
+
+//------------- RESOLUTION : 800px to 899px screens (tablets)
+
+@media screen and (max-width:899px) {
+    .container {
+        width: 800px;
+    }
+}
+
+//------------- RESOLUTION : 768px to 799px screens (tablets)
+
+@media screen and (max-width:799px) {
+    .container {
+        width: 760px;
     }
 }
 

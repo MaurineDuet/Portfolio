@@ -131,9 +131,7 @@
 
 }
 
-
-
-//-------- RESOLUTION : 999px to 768px screens (tablets)
+//-------- RESOLUTION : 900px to 999px screens (tablets)
 
 @media screen and (max-width:999px) {
     //General settings
@@ -160,7 +158,59 @@
 
 }
 
-//-------- RESOLUTION : 768px to 350px screens (phone)
+//-------- RESOLUTION : 800px to 899px screens (tablets)
+
+@media screen and (max-width:899px) {
+    //General settings
+
+    .main_container {
+        gap: 25px;
+    }
+
+    //Center div (icons + pic)
+
+    .main_center {
+
+        //Img
+        .center {
+
+            img {
+                width: 160px;
+
+            }
+        }
+
+    }
+
+}
+
+//-------- RESOLUTION : 768px to 799px screens (tablets)
+
+@media screen and (max-width:799px) {
+    //General settings
+
+    .main_container {
+        gap: 25px;
+    }
+
+    //Center div (icons + pic)
+
+    .main_center {
+
+        //Img
+        .center {
+
+            img {
+                width: 160px;
+
+            }
+        }
+
+    }
+
+}
+
+//-------- RESOLUTION : 350px to 767px screens (phone)
 
 
 @media screen and (max-width:767px) {

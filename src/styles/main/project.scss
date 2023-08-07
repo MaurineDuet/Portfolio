@@ -50,8 +50,7 @@
 
 }
 
-
-//----- RESOLUTION : 999px to 768px (tablets)
+//----- RESOLUTION : 900px to 999px (tablets)
 
 @media screen and (max-width:999px) {
 
@@ -68,6 +67,17 @@
             padding: 3px 5px;
         }
     }
+
+    .main_page {
+        flex-basis: 33%;
+    }
+
+}
+
+
+//----- RESOLUTION : 768px to 899px (tablets)
+
+@media screen and (max-width:899px) {
 
     .main_page {
         flex-basis: 50%;
