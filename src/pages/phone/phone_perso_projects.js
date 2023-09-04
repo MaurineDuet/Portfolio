@@ -38,7 +38,7 @@ function PersoProjects() {
         setIsModalOpen(false)
     }
 
-    const { data, error } = useFetch('/Portfolio/db/projects.json')
+    const { data, error } = useFetch('/db/projects.json')
 
     useEffect(() => {
         if (data) {

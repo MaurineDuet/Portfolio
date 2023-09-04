@@ -24,8 +24,12 @@ function Footer({ audioElementRef, volume, setVolume }) {
 
     const [currentTime, setCurrentTime] = useState('') //Initializing time const
     const [currentDate, setCurrentDate] = useState('') //Initializing date const
+
     const [menuVisible, setMenuVisible] = useState(false)
+    const [volumeVisible, setVolumeVisible] = useState(false)
+
     const menuRef = useRef(null)
+    /*     const volumeRef = useRef(null) */
 
     //Getting time and date
     useEffect(() => {
@@ -60,6 +64,7 @@ function Footer({ audioElementRef, volume, setVolume }) {
                 !event.target.classList.contains('start-button')) {
                 setMenuVisible(false)
             }
+
         };
 
         document.addEventListener('mousedown', handleClickOutside);
@@ -74,21 +79,10 @@ function Footer({ audioElementRef, volume, setVolume }) {
         setMenuVisible(!menuVisible);
     }
 
-    //Volume modal
-    const [showVolumeModal, setShowVolumeModal] = useState(false);
-    const [isVolumeModalOpen, setIsVolumeModalOpen] = useState(false)
-
-    //Trigger open volume modal
-    const openVolumeModal = () => {
-        setShowVolumeModal(true);
-        setIsVolumeModalOpen(true); // Set the state to open
-    };
-
-    // Trigger close volume modal
-    const closeVolumeModal = () => {
-        setShowVolumeModal(false);
-        setIsVolumeModalOpen(false); // Set the state to close
-    };
+    //Trigger open menu
+    const toggleVolume = () => {
+        setVolumeVisible(!volumeVisible)
+    }
 
 
     return (
@@ -118,9 +112,9 @@ function Footer({ audioElementRef, volume, setVolume }) {
 
             <nav>
                 <ul>
-                    <li><img src={Notes} alt="Icone prise de note" className='footer_nav_button' /></li>
-                    <li>FR</li>
-                    <li className=' volume_button' onClick={isVolumeModalOpen ? closeVolumeModal : openVolumeModal}><img src={Volume} alt="Icone volume" className='footer_nav_button' /></li>
+                    <li><img src={Notes} alt="Icone prise de note" className='footer_nav_button'/></li>
+                    <li className='footer_nav_button'>FR</li>
+                    <li onClick={toggleVolume} className="volume_button footer_nav_button"><img src={Volume} alt="Icone volume" className="volume_button"/></li>
                     <li><img src={Wifi} alt="Icone wifi" className='footer_nav_button' /></li>
                     <li><img src={Battery} alt="Icone batterie d'ordinateur" className='footer_nav_button' /></li>
                     <li className='hour'>{currentTime}</li>
@@ -128,17 +122,15 @@ function Footer({ audioElementRef, volume, setVolume }) {
                 </ul>
             </nav>
 
-            {showVolumeModal && (
-                <VolumeModal
-                    audioElementRef={audioElementRef}
-                    volume={volume}
-                    setVolume={setVolume}
-                    closeModal={closeVolumeModal}
-                    isVolumeModalOpen={isVolumeModalOpen}
-                />
-            )}
+            <VolumeModal
+                audioElementRef={audioElementRef}
+                volume={volume}
+                setVolume={setVolume}
+                isVisible={volumeVisible} // Use the volumeVisible state to control the visibility of the Volume Modal
+                toggleVolume={toggleVolume} // Update the closeModal function
+            />
 
-        </footer>
+        </footer >
     )
 }
 

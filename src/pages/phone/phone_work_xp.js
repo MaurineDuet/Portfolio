@@ -51,7 +51,7 @@ function CvWork() {
         setIsModalOpen(false)
     }
 
-    const { data, error } = useFetch('/Portfolio/db/experiences.json')
+    const { data, error } = useFetch('/db/experiences.json')
 
     useEffect(() => {
         if (data) {

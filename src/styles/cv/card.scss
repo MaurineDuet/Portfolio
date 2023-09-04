@@ -37,6 +37,8 @@
     .cv_card_main {
         display: flex;
         gap: 7px;
+        padding: 7px;
+        box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
 
         //Left side (list of files div)
         .cv_card_files {

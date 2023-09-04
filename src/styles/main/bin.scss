@@ -1,0 +1,18 @@
+.bin {
+    display: flex;
+    flex-direction: row!important;
+
+    .bin_element {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        gap: 15px;
+        width: 100px;
+
+        img {
+            object-fit: contain;
+            height: 50px;
+        }
+    }
+
+}

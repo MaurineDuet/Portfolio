@@ -6,7 +6,7 @@
     gap: 40px;
     background-color: #CDCAC6;
     box-shadow: 3px 3px 0 #474350, 3px 3px #FFFFF3 inset;
-    padding: 5px;
+    padding: 7px;
 
     .cv_buttons_title {
         background-color: #30345A;
@@ -21,20 +21,21 @@
     //Nav and buttons
     .cv_buttons {
         display: flex;
-        gap: 40px;
-        justify-content: center;
+        gap: 2px;
+        padding: 0;
+
 
         .cv_button {
             background-color: #CDCAC6;
-            box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
-            padding: 15px 0px;
+            box-shadow: 2px 0px 0 #474350, 0px 2px 0 #CDCAC6, 2px 2px #FFFFF3 inset;
+            padding: 10px 0px;
             width: 120px;
             text-align: center;
             cursor: pointer;
 
             &:hover,
             &.selected {
-                background-color: #C2DCFF;
+                z-index: 1;
             }
         }
 

@@ -11,16 +11,55 @@ import ProjectImg1 from '../../assets/project_img_1.jpg'
 import ProjectImg2 from '../../assets/project_img_2.jpg'
 import ProjectImg3 from '../../assets/project_img_3.jpg'
 
+//Basics 
+import { useState, useEffect } from 'react'
+
 function Modal({ closeModal, creationdate, name, description, objectives, langages, github }) {
+
+    const [isDragging, setIsDragging] = useState(false);
+    const [offsetX, setOffsetX] = useState(0);
+    const [offsetY, setOffsetY] = useState(0);
+    const [modalPosition, setModalPosition] = useState({
+        x: (window.innerWidth - 550) / 2,
+        y: (window.innerHeight - 500) / 2,
+      })
+
+    useEffect(() => {
+        if (isDragging) {
+            const onMouseMove = (e) => {
+                const newX = e.clientX - offsetX;
+                const newY = e.clientY - offsetY;
+                setModalPosition({ x: newX, y: newY });
+            };
+
+            const onMouseUp = () => {
+                setIsDragging(false);
+            };
+
+            window.addEventListener('mousemove', onMouseMove);
+            window.addEventListener('mouseup', onMouseUp);
+
+            return () => {
+                window.removeEventListener('mousemove', onMouseMove);
+                window.removeEventListener('mouseup', onMouseUp);
+            };
+        }
+    }, [isDragging, offsetX, offsetY]);
+
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setOffsetX(e.clientX - modalPosition.x);
+        setOffsetY(e.clientY - modalPosition.y);
+    };
 
     return (
         <div className="modal_overlay">
 
-            <div className="modal">
+            <div className="modal" style={{ top: modalPosition.y, left: modalPosition.x }}>
 
                 <div className='modal_title'>
 
-                    <div className='modal_title_up'>
+                    <div className='modal_title_up' onMouseDown={handleMouseDown}>
 
                         <h3>C:/Maurine_Duet/{name}</h3>
                         <p className='close_button' onClick={closeModal}>

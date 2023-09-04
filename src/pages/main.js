@@ -17,6 +17,7 @@ import Notes from '../components/main/notes'
 import Note from '../components/main/note'
 import Music from '../components/main/music'
 import Modal from '../components/main/modal'
+import Bin from '../components/main/bin'
 
 //Hook
 import { useFetch } from '../hooks/fetch'
@@ -60,7 +61,7 @@ function Main() {
         setIsModalOpen(false)
     }
 
-    const { data, error } = useFetch('/Portfolio/db/projects.json')
+    const { data, error } = useFetch('/db/projects.json')
 
     useEffect(() => {
         if (data) {
@@ -71,10 +72,22 @@ function Main() {
         }
     }, [data])
 
+    //Modal de la corbeille
+
+    const [isBinModalOpen, setIsBinModalOpen] = useState(false)
+
+    const openBinModal = () => {
+        setIsBinModalOpen(true)
+    }
+
+    const closeBinModal = () => {
+        setIsBinModalOpen(false)
+    }
+
     //Musique
 
     //Fetch les musiques
-    const { songs, songsError } = useFetchMusic('/Portfolio/db/music.json');
+    const { songs, songsError } = useFetchMusic('/db/music.json');
 
     //Règle le volume de base
     const [volume, setVolume] = useState(0.5)
@@ -83,11 +96,11 @@ function Main() {
     // Gestion des erreurs pour la musique et pour les données des projets
 
     if (!songs) {
-      return <span>Loading...</span>; // Display a loading message or spinner
+        return <span>Loading...</span>; // Display a loading message or spinner
     }
-  
+
     if (songsError) {
-      return <span>Error fetching songs data.</span>; // Display an error message
+        return <span>Error fetching songs data.</span>; // Display an error message
     }
 
     if (!data) {
@@ -126,7 +139,7 @@ function Main() {
 
                     <div className='center_icons'>
 
-                        <div className='trash_icon'>
+                        <div className='trash_icon' onClick={() => openBinModal()}>
                             <img src={Trash} alt="Icône corbeille" />
                             <p>Corbeille</p>
                         </div>
@@ -156,6 +169,7 @@ function Main() {
             </div>
 
             {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} creationdate={selectedProjectCreationDate} github={selectedProjectGitHub} />}
+            {isBinModalOpen && <Bin closeBinModal={closeBinModal} />}
             
             <Footer audioElementRef={audioElementRef} volume={volume} setVolume={setVolume}></Footer>
 

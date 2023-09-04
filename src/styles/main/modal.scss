@@ -17,6 +17,7 @@
     //Modal itself basic settings
 
     .modal {
+        position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;

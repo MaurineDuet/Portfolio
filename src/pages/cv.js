@@ -27,7 +27,7 @@ function Cv() {
     const [educationExperience, setEducationExperience] = useState([])
     const [selectedExperience, setSelectedExperience] = useState(null)
     const [selectedButton, setSelectedButton] = useState('work')
-    const { data, error } = useFetch('/Portfolio/db/experiences.json')
+    const { data, error } = useFetch('/db/experiences.json')
 
     useEffect(() => {
         if (data) {
@@ -79,6 +79,10 @@ function Cv() {
                             ? educationExperience
                             : []
                 }
+                selectedButton={selectedButton}
+                handleWorkButtonClick={handleWorkButtonClick}
+                handleEducationButtonClick={handleEducationButtonClick}
+                handleSkillsButtonClick={handleSkillsButtonClick}
             />
         );
     } else if (selectedButton === 'stats') {
@@ -86,6 +90,10 @@ function Cv() {
             <StatsCard
                 selectedExperience={selectedExperience}
                 onExperienceClick={handleExperienceClick}
+                selectedButton={selectedButton}
+                handleWorkButtonClick={handleWorkButtonClick}
+                handleEducationButtonClick={handleEducationButtonClick}
+                handleSkillsButtonClick={handleSkillsButtonClick}
             />
         )
     }
@@ -108,14 +116,6 @@ function Cv() {
                     <Profile></Profile>
 
                     <div className='cv_details'>
-
-                        <h3 className='cv_buttons_title'>Cliquez sur les boutons ci-dessous pour parcourir les pages de mon CV</h3>
-
-                        <ul className='cv_buttons'>
-                            <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
-                            <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>
-                            <li className={`cv_button stats_button ${selectedButton === 'stats' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
-                        </ul>
 
                         {content}
 

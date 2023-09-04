@@ -25,7 +25,7 @@ function Error() {
                     </div>
                     <p>Youpla boum ! Cette page n’existe pas :/ Mon univers ne s’étend pas encore aussi loin !</p>
 
-                    <Link to="/Portfolio" className='redirection_button'>
+                    <Link to="/" className='redirection_button'>
                         Revenir à l'accueil
                     </Link>
                 </div>

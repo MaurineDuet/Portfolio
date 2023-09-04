@@ -15,7 +15,7 @@ import ToolsIcon from '../../assets/cv_tools_icon.svg'
 import NotesIcon from '../../assets/cv_notes_icon.svg'
 import SearchIcon from '../../assets/cv_search_icon.svg'
 
-function Card({ selectedExperience, onExperienceClick, experiences }) {
+function Card({ selectedExperience, onExperienceClick, experiences, selectedButton, handleWorkButtonClick, handleEducationButtonClick, handleSkillsButtonClick }) {
 
     const { name, job_calendar, job_description, reward, job_place, strong_skills, good_skills, average_skills, weak_skills, tools = [], search } = selectedExperience || {}
 
@@ -31,11 +31,19 @@ function Card({ selectedExperience, onExperienceClick, experiences }) {
 
             <h3>{selectedType === 'work' ? 'Expériences professionnelles' : 'Formation'}</h3>
 
-            <ul className='cv_nav_1'>
-                <li>File</li>
-                <li>Edit</li>
-                <li>View</li>
-                <li>Help</li>
+            <nav>
+                <ul>
+                    <li>File</li>
+                    <li>Edit</li>
+                    <li>View</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+
+            <ul className='cv_buttons'>
+                <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
+                <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>
+                <li className={`cv_button stats_button ${selectedButton === 'stats' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
             </ul>
 
 

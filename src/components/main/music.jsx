@@ -18,6 +18,7 @@ function Music({ songs, audioElementRef }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [audioReady, setAudioReady] = useState(false)
+    const [songDuration, setSongDuration] = useState(0)
 
     //Audio element creation
 
@@ -46,8 +47,10 @@ function Music({ songs, audioElementRef }) {
     useEffect(() => {
         const audioElement = audioElementRef.current;
       
-        const handleLoadedMetadata = () => {
+        const handleLoadedMetadata = (meta) => {
           setAudioReady(true);
+          const {duration} = meta.target;
+          setSongDuration(duration)
         };
       
         if (audioElement) {
@@ -216,12 +219,12 @@ function Music({ songs, audioElementRef }) {
                     <input
                         type='range'
                         min='0'
-                        max={audioReady ? audioElementRef.current.duration : 0}
+                        max={audioReady ? songDuration : 0}
                         step='0.01'
                         value={currentTime}
                         onChange={onSeekBarChange}
                     />
-                    <p>{audioReady ? formatTime(audioElementRef.current.duration) : 'OO:OO'}</p>
+                    <p>{audioReady ? formatTime(songDuration) : 'OO:OO'}</p>
                 </div>
 
             </div>

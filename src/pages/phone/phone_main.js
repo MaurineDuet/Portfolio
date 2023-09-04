@@ -5,6 +5,7 @@ import '../../styles/error.scss'
 //Basic
 import { Link } from 'react-router-dom'
 import { useFetchMusic } from '../../hooks/fetch_music'
+import { useState, useRef } from 'react'
 
 //Images
 import FileIcon from '../../assets/file.svg'
@@ -22,20 +23,22 @@ function MainPhone() {
 
     //Musique
 
-    const { songs, songsError } = useFetchMusic('/Portfolio/db/music.json');
-    console.log(songs)
+    //Fetch les musiques
+    const { songs, songsError } = useFetchMusic('/db/music.json');
+
+    //Règle le volume de base
+    const [volume, setVolume] = useState(0.5)
+    const audioElementRef = useRef(null)
 
     // Gestion des erreurs pour la musique et pour les données des projets
 
     if (!songs) {
-      return <span>Loading...</span>; // Display a loading message or spinner
+        return <span>Loading...</span>; // Display a loading message or spinner
     }
-  
+
     if (songsError) {
-      return <span>Error fetching songs data.</span>; // Display an error message
+        return <span>Error fetching songs data.</span>; // Display an error message
     }
-
-
     return (
         <div className="main_phone_container">
 
@@ -75,7 +78,7 @@ function MainPhone() {
 
             </div>
 
-            <Music songs={songs} ></Music>
+            <Music songs={songs} audioElementRef={audioElementRef}></Music>
 
         </div>
     )

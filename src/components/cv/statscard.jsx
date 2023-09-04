@@ -9,26 +9,34 @@ import Project from '../main/project'
 import Competences from './statscard_competences'
 import Language from './statscard_langues'
 
-function StatsCard({ selectedExperience, onExperienceClick }) {
+function StatsCard({ selectedExperience, onExperienceClick, selectedButton, handleWorkButtonClick, handleEducationButtonClick, handleSkillsButtonClick }) {
 
     let content
 
     if (selectedExperience === 'compétences') {
         content = <Competences />
-      } else if (selectedExperience === 'languages') {
+    } else if (selectedExperience === 'languages') {
         content = <Language />
-      }
+    }
 
     return (
         <section className="cv_card">
 
             <h3>Statistiques</h3>
 
-            <ul className='cv_nav_1'>
-                <li>File</li>
-                <li>Edit</li>
-                <li>View</li>
-                <li>Help</li>
+            <nav>
+                <ul>
+                    <li>File</li>
+                    <li>Edit</li>
+                    <li>View</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+
+            <ul className='cv_buttons'>
+                <li className={`cv_button work_button ${selectedButton === 'work' ? 'selected' : ''}`} onClick={handleWorkButtonClick}>XP pro</li>
+                <li className={`cv_button education_button ${selectedButton === 'education' ? 'selected' : ''}`} onClick={handleEducationButtonClick}>formation</li>
+                <li className={`cv_button stats_button ${selectedButton === 'stats' ? 'selected' : ''}`} onClick={handleSkillsButtonClick}>stats</li>
             </ul>
 
 
