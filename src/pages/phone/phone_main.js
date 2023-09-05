@@ -13,6 +13,7 @@ import AboutMe from '../../assets/about_me_phone.svg'
 import SwitchGirl from '../../assets/girl_switch.jpg'
 import PhoneGirl from '../../assets/girl_phone.jpg'
 import NotesIcon from '../../assets/cv_notes_icon.svg'
+import BottomCover from '../../assets/phone_bottom_cover.gif'
 
 //Component 
 import ErrorPhone from '../../components/error/error_phone_version'
@@ -73,6 +74,8 @@ function MainPhone() {
                         <img src={NotesIcon} alt="Icone de personnage" />
                         Mes notes
                     </Link>
+
+                    <img src={BottomCover} className='phone_bottom_cover'/>
 
                 </section>
 

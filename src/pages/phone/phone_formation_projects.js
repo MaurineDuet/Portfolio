@@ -13,6 +13,9 @@ import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 import { useState, useEffect } from 'react'
 import { useFetch } from '../../hooks/fetch'
 
+//Image
+import BottomProjects from '../../assets/phone_bottom.gif'
+
 function FormationProjects() {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -66,6 +69,9 @@ function FormationProjects() {
                 {formationProjects.map((project) =>
                     <Project key={project.id} name={project.name} onClick={() => openModal(project.name, project.description, project.objectives, project.langages, project.creationdate)} isMainPage={true} />
                 )}
+
+                <img src={BottomProjects} className='phone_bottom_projects' />
+
             </Projects>
 
             {isModalOpen && <Modal closeModal={closeModal} name={selectedProjectName} description={selectedProjectDescription} objectives={selectedProjectObjectives} langages={selectedProjectLangages} creationdate={selectedProjectCreationDate} />}

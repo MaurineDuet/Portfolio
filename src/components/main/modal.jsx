@@ -19,9 +19,20 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
     const [isDragging, setIsDragging] = useState(false);
     const [offsetX, setOffsetX] = useState(0);
     const [offsetY, setOffsetY] = useState(0);
-    const [modalPosition, setModalPosition] = useState({
-        x: (window.innerWidth - 550) / 2,
-        y: (window.innerHeight - 500) / 2,
+    const [modalPosition, setModalPosition] = useState(() => {
+        if (window.innerWidth > 768) {
+          // Customize initial position when window width > 768px
+          return {
+            x: (window.innerWidth - 550) / 2,
+            y: (window.innerHeight - 500) / 2,
+          };
+        } else {
+          // Centered position when window width <= 768px
+          return {
+            x: (window.innerWidth - 350) / 2,
+            y: (window.innerHeight - 500) / 2,
+          };
+        }
       })
 
     useEffect(() => {

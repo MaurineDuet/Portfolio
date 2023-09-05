@@ -10,14 +10,15 @@
     justify-content: center;
     align-items: center;
     background-image: url('../../assets/background_universe.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 
     .redirection {
         display: flex;
     }
 
-    .music {
+    .music,
+    .phone_bottom_cover {
         display: none;
     }
 
@@ -30,6 +31,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
         background-image: url('../../assets/background_universe.jpg');
         background-repeat: no-repeat;
@@ -42,13 +44,14 @@
         .phone_header_and_main_content {
             display: flex;
             flex-direction: column;
+            align-items: stretch;
 
 
             .phone_main_content {
                 display: flex;
-                padding: 30px;
+                padding: 40px 30px;
                 justify-content: center;
-                align-items: stretch;
+                align-items: center;
                 overflow-x: scroll;
                 gap: 30px;
                 flex-wrap: wrap;
@@ -94,6 +97,27 @@
             display: flex;
         }
 
+        .phone_bottom_cover {
+            display: block;
+            height: 20vh;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
     }
+
+}
+
+@media screen and (max-width:509px) {
+
+    .main_phone_container {
+
+        .phone_bottom_cover {
+            display: none;
+        }
+
+    }
+
 
 }

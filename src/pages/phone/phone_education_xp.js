@@ -10,6 +10,9 @@ import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 import { useState, useEffect } from 'react'
 import { useFetch } from '../../hooks/fetch'
 
+//Image
+import BottomCV from '../../assets/cv_bottom.gif'
+
 function CvEducation() {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -20,7 +23,7 @@ function CvEducation() {
     const [selectedExperienceCalendar, setSelectedExperienceCalendar] = useState('')
     const [selectedExperienceDescription, setSelectedExperienceDescription] = useState('')
     const [selectedExperienceReward, setSelectedExperienceReward] = useState('')
-    
+
 
     const [selectedExperienceStrongskills, setSelectedExperienceStrongskills] = useState('')
     const [selectedExperienceGoodskills, setSelectedExperienceGoodskills] = useState('')
@@ -103,6 +106,8 @@ function CvEducation() {
                         isMainPage={true}
                     />
                 ))}
+
+                <img src={BottomCV} className='phone_bottom_projects' />
             </Projects>
 
             {isModalOpen && (

@@ -163,9 +163,8 @@
         background-color: rgba(0, 0, 0, 0.6);
 
         .modal {
-            width: 90%;
-            height: auto;
-            max-height: 80vh;
+            width: 350px;
+            height: 500px;
 
             //Title (blue bar + params)
 
@@ -206,11 +205,13 @@
             .cv_card {
 
                 margin-top: 0;
+                margin-bottom: 5px;
                 padding: 20px 0;
 
                 .cv_card_main {
 
                     width: 100%;
+                    box-shadow: none;
 
                     .cv_card_details {
                         background: none;

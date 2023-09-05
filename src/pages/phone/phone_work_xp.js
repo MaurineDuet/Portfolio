@@ -10,6 +10,9 @@ import PhoneFooter from '../../components/phoneresponsive/phone_footer'
 import { useState, useEffect } from 'react'
 import { useFetch } from '../../hooks/fetch'
 
+//Image
+import BottomCV from '../../assets/cv_bottom.gif'
+
 function CvWork() {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -99,6 +102,9 @@ function CvWork() {
                         isMainPage={true}
                     />
                 ))}
+
+                <img src={BottomCV} className='phone_bottom_projects' />
+
             </Projects>
 
             {isModalOpen && (
