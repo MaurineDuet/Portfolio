@@ -18,6 +18,17 @@
     }
 }
 
+.main_pc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    place-items: center;
+}
+
+.main_phone {
+    display: none;
+}
+
 .main_container {
     display: flex;
     align-items: flex-start;
@@ -218,7 +229,15 @@
     .main_overall_container {
         justify-content: center;
 
-        .redirection_main_computer {
+        .main_pc {
+            display: none;
+        }
+        
+        .main_phone {
+            display: flex;
+        }
+
+/*         .redirection_main_computer {
             display: flex;
         }
 
@@ -229,7 +248,7 @@
         .modal_overlay {
             display: none;
         }
-
+ */
     }
 
 }

@@ -12,7 +12,7 @@ import Footer from '../components/footer/footer'
 import Profile from '../components/cv/profile'
 import Card from '../components/cv/card'
 import StatsCard from '../components/cv/statscard'
-import ErrorPc from '../components/error/error_pc_version'
+/* import ErrorPc from '../components/error/error_pc_version' */
 
 //Basic 
 import { Link } from 'react-router-dom'
@@ -20,6 +20,22 @@ import { Link } from 'react-router-dom'
 //Hook
 import { useFetch } from '../hooks/fetch'
 import { useState, useEffect } from 'react'
+
+//Phone
+
+//Style
+import '../styles/responsivephone/phone_cv.scss'
+
+//Image
+import WorkIcon from '../assets/work_icon.svg'
+import EducationIcon from '../assets/education_icon.svg'
+import StatsIcon from '../assets/skills_icon.svg'
+
+//Component
+import PhoneHeader from '../components/phoneresponsive/phone_header'
+import PhoneFooter from '../components/phoneresponsive/phone_footer'
+/* import ErrorPhone from '../components/error/error_phone_version' */
+
 
 function Cv() {
 
@@ -98,47 +114,87 @@ function Cv() {
         )
     }
 
-
-
     return (
         <div className='cv_container_overall'>
 
-            <img src={StarsBackground} alt="Fond d'écran étoiles" className='stars_background_cv' />
+            <div className='cv_pc'>
 
-            <ErrorPc></ErrorPc>
+                <img src={StarsBackground} alt="Fond d'écran étoiles" className='stars_background_cv' />
 
-            <Header></Header>
+                {/* <ErrorPc></ErrorPc> */}
 
-            <div className='container'>
+                <Header></Header>
 
-                <section className='cv_small_container'>
+                <div className='container'>
 
-                    <Profile></Profile>
+                    <section className='cv_small_container'>
 
-                    <div className='cv_details'>
+                        <Profile></Profile>
 
-                        {content}
+                        <div className='cv_details'>
 
-                    </div>
+                            {content}
 
-                    <div className='cv_bottom_buttons'>
-                        <Link to='/' className='cv_bottom_button'>
-                            retour
-                        </Link>
-                        <Link to='/main' className='cv_bottom_button'>
-                            explorer mon univers
-                        </Link>
-                    </div>
+                        </div>
+
+                        <div className='cv_bottom_buttons'>
+                            <Link to='/' className='cv_bottom_button'>
+                                retour
+                            </Link>
+                            <Link to='/main' className='cv_bottom_button'>
+                                explorer mon univers
+                            </Link>
+                        </div>
 
 
-                </section>
+                    </section>
+
+                </div>
+
+                <Footer></Footer>
 
             </div>
 
-            <Footer></Footer>
+            <div className='cv_tel'>
+
+                <div className='phone_cv'>
+
+                    {/* <ErrorPhone></ErrorPhone> */}
+
+                    <PhoneHeader></PhoneHeader>
+
+                    <div className='phone_cv_main_content'>
+
+                        <Profile></Profile>
+
+                        <div className='cv_details'>
+
+                            <nav className='cv_buttons'>
+                                <Link to='/cvwork' className='cv_button'>
+                                    <img src={WorkIcon} alt="Icone travail" />
+                                    <p>XP pro</p>
+                                </Link>
+                                <Link to='/cveducation' className='cv_button'>
+                                    <img src={EducationIcon} alt="Icone formation" />
+                                    <p>formation</p>
+                                </Link>
+                                <Link to='/cvstats' className='cv_button'>
+                                    <img src={StatsIcon} alt="Icone compétences" />
+                                    <p>stats</p>
+                                </Link>
+                            </nav>
+
+                        </div>
+
+                    </div>
+
+                    <PhoneFooter></PhoneFooter>
+
+                </div>
+
+            </div>
 
         </div>
-
 
     )
 }

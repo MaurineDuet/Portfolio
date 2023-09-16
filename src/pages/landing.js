@@ -62,10 +62,10 @@ function Landing() {
                                     </div>
 
                                     <div className='landing_buttons_phone'>
-                                          <Link to='/mainphone' className='link_button'>
+                                          <Link to='/main' className='link_button'>
                                                 mon univers
                                           </Link>
-                                          <Link to='/cvphone' className='link_button'>
+                                          <Link to='/cv' className='link_button'>
                                                 mon CV
                                           </Link>
                                     </div>

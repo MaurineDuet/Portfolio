@@ -117,8 +117,8 @@ function Footer({ audioElementRef, volume, setVolume }) {
                     <li onClick={toggleVolume} className="volume_button footer_nav_button"><img src={Volume} alt="Icone volume" className="volume_button"/></li>
                     <li><img src={Wifi} alt="Icone wifi" className='footer_nav_button' /></li>
                     <li><img src={Battery} alt="Icone batterie d'ordinateur" className='footer_nav_button' /></li>
-                    <li className='hour'>{currentTime}</li>
-                    <li className='hour'>{currentDate}</li>
+                    <li className='hour'>{currentTime ? currentTime : 'Hour loading'}</li>
+                    <li className='hour'>{currentDate ? currentDate : 'Date loading'}</li>
                 </ul>
             </nav>
 

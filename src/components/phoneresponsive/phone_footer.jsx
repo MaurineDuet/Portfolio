@@ -9,7 +9,7 @@ function PhoneFooter() {
     return (
         <footer className="phone_footer">
 
-            <Link to='/mainphone' className='footer_link'>
+            <Link to='/main' className='footer_link'>
                 Back
             </Link>
             <p>Select</p>

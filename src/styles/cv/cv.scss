@@ -13,52 +13,63 @@
     align-items: center;
     position: relative;
 
-    .redirection_main_computer {
-        display: none;
-    }
-
-    //Background image
-    .stars_background_cv {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 500px;
-    }
-
-    //Second container
-    .cv_small_container {
-        min-height: 90vh;
+    .cv_pc {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        z-index: 2;
+        width: 100%;
+
+        .redirection_main_computer {
+            display: none;
+        }
+
+        //Background image
+        .stars_background_cv {
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 500px;
+        }
+
+        //Second container
+        .cv_small_container {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            z-index: 2;
+
+        }
+
+        .cv_bottom_buttons {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 100px;
+
+            .cv_bottom_button {
+                background-color: #CDCAC6;
+                box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
+                padding: 15px 0px;
+                width: 200px;
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                color: inherit;
+
+                &:hover,
+                &.selected {
+                    background-color: #C2DCFF;
+                }
+            }
+
+
+        }
 
     }
 
-    .cv_bottom_buttons {
-        display: flex;
-        gap: 40px;
-        justify-content: center;
-        margin-bottom: 100px;
-
-        .cv_bottom_button {
-            background-color: #CDCAC6;
-            box-shadow: 2px 2px 0 #474350, 2px 2px #FFFFF3 inset;
-            padding: 15px 0px;
-            width: 200px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-
-            &:hover,
-            &.selected {
-                background-color: #C2DCFF;
-            }
-        }
-
-
+    .cv_tel {
+        display: none;
     }
 }
 
@@ -67,18 +78,30 @@
     .cv_container_overall {
         justify-content: center;
 
-        .redirection_main_computer {
+        .cv_pc {
+            display: none;
+        }
+
+        .cv_tel {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+
+        }
+
+/*         .redirection_main_computer {
             display: flex;
             z-index: 2;
-            
+
         }
+
         .container,
         header,
         footer,
         .stars_background_cv {
             display: none;
         }
-
+ */
     }
 
 }

@@ -21,19 +21,19 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
     const [offsetY, setOffsetY] = useState(0);
     const [modalPosition, setModalPosition] = useState(() => {
         if (window.innerWidth > 768) {
-          // Customize initial position when window width > 768px
-          return {
-            x: (window.innerWidth - 550) / 2,
-            y: (window.innerHeight - 500) / 2,
-          };
+            // Customize initial position when window width > 768px
+            return {
+                x: (window.innerWidth - 550) / 2,
+                y: (window.innerHeight - 500) / 2,
+            };
         } else {
-          // Centered position when window width <= 768px
-          return {
-            x: (window.innerWidth - 350) / 2,
-            y: (window.innerHeight - 500) / 2,
-          };
+            // Centered position when window width <= 768px
+            return {
+                x: (window.innerWidth - 350) / 2,
+                y: (window.innerHeight - 500) / 2,
+            };
         }
-      })
+    })
 
     useEffect(() => {
         if (isDragging) {
@@ -47,12 +47,30 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
                 setIsDragging(false);
             };
 
+            const onTouchMove = (e) => {
+                if (isDragging && e.touches.length === 1) {
+                    const newX = e.touches[0].clientX - offsetX;
+                    const newY = e.touches[0].clientY - offsetY;
+                    setModalPosition({ x: newX, y: newY });
+                }
+            };
+
+            const onTouchEnd = () => {
+                if (isDragging) {
+                    setIsDragging(false);
+                }
+            }
+
             window.addEventListener('mousemove', onMouseMove);
             window.addEventListener('mouseup', onMouseUp);
+            window.addEventListener('touchmove', onTouchMove);
+            window.addEventListener('touchend', onTouchEnd);
 
             return () => {
                 window.removeEventListener('mousemove', onMouseMove);
                 window.removeEventListener('mouseup', onMouseUp);
+                window.removeEventListener('touchmove', onTouchMove);
+                window.removeEventListener('touchend', onTouchEnd)
             };
         }
     }, [isDragging, offsetX, offsetY]);
@@ -61,7 +79,16 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
         setIsDragging(true);
         setOffsetX(e.clientX - modalPosition.x);
         setOffsetY(e.clientY - modalPosition.y);
-    };
+    }
+
+    const handleTouchStart = (e) => {
+        if (e.touches.length === 1) {
+            e.preventDefault(); // Prevent default to prevent scrolling while dragging
+            setIsDragging(true);
+            setOffsetX(e.touches[0].clientX - modalPosition.x);
+            setOffsetY(e.touches[0].clientY - modalPosition.y);
+        }
+    }
 
     return (
         <div className="modal_overlay">
@@ -70,7 +97,7 @@ function Modal({ closeModal, creationdate, name, description, objectives, langag
 
                 <div className='modal_title'>
 
-                    <div className='modal_title_up' onMouseDown={handleMouseDown}>
+                    <div className='modal_title_up' onMouseDown={handleMouseDown} onTouchStart={handleTouchStart}>
 
                         <h3>C:/Maurine_Duet/{name}</h3>
                         <p className='close_button' onClick={closeModal}>

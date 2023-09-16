@@ -3,7 +3,7 @@
         "id": 1,
         "name": "The start",
         "type": "personnel",
-        "description": "site statique simple servant de portfolio et CV",
+        "description": "Un premier site statique simple, servant à mettre en avant mon CV",
         "objectives": "* premier projet de code\n* créer un premier site \n* utiliser les flex-box \n* mettre en place un responsive",
         "langages": "HTML, CSS",
         "creationdate" : "10/2022",
@@ -18,7 +18,7 @@
         "objectives": "* premier projet complexe\n* utilisation du JS Vanilla\n* utilisation de la fonction fetch",
         "langages": "HTML, CSS, JavaScript Vanilla",
         "creationdate" : "11/2022",
-        "github": ""
+        "github": "https://github.com/MaurineDuet/Cake-Day"
     },
 
     {
@@ -40,7 +40,7 @@
         "objectives": "* exploration de designs complexes\n* création d'une base de données en json\n* exploration en profondeur de CSS et JS Vanilla",
         "langages": "HTML, CSS, JavaScript Vanilla, json",
         "creationdate" : "02/2023",
-        "github": "blabla"
+        "github": "https://github.com/MaurineDuet/Outfit-me"
     },
 
 
@@ -52,7 +52,7 @@
         "objectives": "* mise en place d'un back-end\n* création de comptes utilisateurs\n* pratique de NodeJS côté server",
         "langages": "HTML, SCSS (sass), React, NodeJS côté server, MongoDB Atlas",
         "creationdate" : "04/2023",
-        "github": "blabla"
+        "github": ""
     },
 
     {
